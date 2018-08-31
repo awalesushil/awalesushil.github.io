@@ -7,7 +7,7 @@
 $(document).ready(function(){
 
     var i = 0;
-    var txt = "Namaste! I'm Sushil. I'm a full-time computer science student and a part-time developer." +
+    var txt = "Namaste! I'm Sushil. I'm a computer science student and I'm interested in NLP and AI." +
     "I am an avid reader and mostly enjoy non-fiction books."; 
     var speed = 60; /* The speed/duration of the effect in milliseconds */
 
