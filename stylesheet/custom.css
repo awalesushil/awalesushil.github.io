@@ -1,0 +1,100 @@
+html {
+    font-family: 'Courier New', Calibri, sans-serif;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#introText {
+    font-size: 1.2em;
+    margin-left: 2%;
+}
+footer {
+    margin-top: 10%;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+.collapsible-header{
+    border-bottom: 0px;
+}
+h5 {
+    -vendor-animation-duration: 7s;
+    -vendor-animation-delay: 1s;
+    -vendor-animation-iteration-count: infinite;
+}
+.screen {
+    border: 2px solid grey;
+    height: 200px;
+}
+.bar {
+    color: grey;
+    height: 22px;
+    width: 100%;
+    margin-top: -1.5%;
+}
+#pathText{
+    font-size: 1.2rem;
+}
+.headerLine{
+    margin-top: -4.25%;
+    padding-left: 2%;
+    margin-right: 5%;
+}
+.headerText {
+    padding-right: 3%;
+}
+.table-of-contents a.active {
+    border-left: 2px solid green;
+    font-size: 1.2rem;
+}
+
+.table-of-contents a{
+    font-size: 1.2rem;
+}
+
+.table-of-contents a:hover {
+    border-left: 1px solid green;
+}
+
+@media screen and (max-width: 768px) {
+    .screen .bar #intro-text{
+        padding-top: 5%;
+    }
+    .screen {
+        height: 150px;
+    }
+    .headerLine{
+        margin-top: -8.25%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .bar {
+        margin-top: -2.5%;
+        clear: center;
+    }
+    #pathText{
+        font-size: 1rem;
+    }
+    .headerLine{
+        margin-top: -11.25%;
+    }
+    .screen {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .bar {
+        margin-top: -2.5%;
+        clear: center;
+    }
+    #pathText{
+        font-size: 1rem;
+    }
+    .headerLine{
+        margin-top: -13.25%;
+    }
+    .screen {
+        height: 220px;
+    }
+}
