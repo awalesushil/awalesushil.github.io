@@ -1,0 +1,18 @@
+# Jekyll Resume Theme
+
+# Site settings
+title: Awale Sushil
+email: ssushil dot awale at gmail dot com
+description: Portfolio of Sushil Awale, Computer Science
+baseurl: ""
+url: "http://sushilawale.com"
+name: Sushil Awale
+job: Computer Science student
+location: Patan, Nepal
+twitter: sushilawale
+github:  awalesushil
+blog: http://blog.sushilawale.com
+linkedin: sushilawale
+
+# Build settings
+markdown: kramdown

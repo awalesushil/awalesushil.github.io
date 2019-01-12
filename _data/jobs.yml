@@ -1,0 +1,44 @@
+-   title: Python Programming Instructor
+    company: DWIT College
+    period: Oct 2018 - Present
+    description: 
+        -  Teaching a full-semester non-credit course to program in Python
+        -  Prepare lecture slides, design assignments and exam questions 
+    link: http://dwit013.github.io
+
+-   title: Web Developer Internship
+    company: Digital Media Lab, DWIT College
+    period: Nov 2017 - Nov 2018
+    description: 
+      - Supervised three interns to develop <a class="link" href="http://dwitnews.com/" target="_blank">DWIT News</a> website
+      - Developed a website for <a class="link" href="http://journal.deerwalk.edu.np/" target="_blank">Deerwalk Journal</a>
+      - Developed an online learning platform for <a class="link" href="http://dlc.dwit.edu.np/" target="_blank">Deerwalk Learning Center</a> 
+      - Developed a Library Management System for Deerwalk Sifal School
+      - Developed a goal-setting app to track employees’ goals for DWIT College
+    link: 
+
+-   title: Editor in Chief
+    company: DWIT News
+    period: Dec 2016 - Dec 2018
+    description: 
+      - Produce weekly college news bulletin
+      - Produce daily news articles on dwitnews.com 
+      - Conduct meetings, brainstorm ideas and plan different events for DWIT News 
+      - Facilitated News script writing and News article writing workshops
+    link: http://dwitnews.com
+
+-   title: Editor
+    company: TechLekh
+    period: Sep 2016 - Jul 2017
+    description: 
+      - Edited and wrote tech news articles 
+      - Created TechLekh style guide 
+      - Conducted news article writing workshops 
+      - Organized news script for TechKhabar - weekly tech news bulletin
+    link:
+
+-   title: PHP Developer Intern
+    company: DWIT College
+    period: Nov 2016 - Dec 2016
+    description: Developed a daily lesson plan management system where teachers can update the daily lesson plans of their subjects for viewing of students and their parents.
+    link: http://lessonplan.sifal.dwit.edu.np/
