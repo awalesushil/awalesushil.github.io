@@ -3,7 +3,7 @@
     description: Built an information retrieval system to retrieve relevant documents from a 
                   corpus based on concept and rank them by relevance to the search query.
     code: https://github.com/awalesushil/ir-lsa
-    report: docs/Information Retrieval from Corpus of Documents using Latent Semantic Indexing.pdf
+    report: 
     category: Academic Project
 
 -   title: Devanagari Handwritten Digit Recognition
@@ -17,7 +17,7 @@
     period: Feb 2018 - July 2018
     description: Implemented a Bloom Filter on a mock registration page to detect duplicate emails
     code: https://github.com/awalesushil/BloomFilter
-    report: docs/Duplicate Email Detection While Registration Using Bloom Filter.pdf
+    report: 
     category: Academic Project
 
 -   title: Animal Guessing Game using Binary Search Tree
