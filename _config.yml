@@ -3,15 +3,15 @@
 # Site settings
 title: Awale Sushil
 email: mail at sushilawale dot com
-description: Portfolio of Sushil Awale, Computer Science
+description: Portfolio of Sushil Awale
 baseurl: ""
-url: "http://sushilawale.com"
+url: "https://sushilawale.com"
 name: Sushil Awale
-job: Computer Science student
+job: Natural Language Processing Research Intern
 location: Patan, Nepal
 twitter: sushilawale
 github:  awalesushil
-blog: http://blog.sushilawale.com
+blog: https://blog.sushilawale.com
 linkedin: sushilawale
 
 # Build settings
