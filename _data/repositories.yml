@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - awalesushil
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - uhh-lt/hindi-wordnet-extension
+  - awalesushil/biomed-qa
+  - awalesushil/arxiv-knowledge-repo
+  - awalesushil/indore
+  - awalesushil/rasa_tmc_bot
+  - awalesushil/morphology-segmentation
