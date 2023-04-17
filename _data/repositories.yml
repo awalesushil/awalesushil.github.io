@@ -2,9 +2,9 @@ github_users:
   - awalesushil
 
 github_repos:
+  - awalesushil/DBLP-QuAD
   - uhh-lt/hindi-wordnet-extension
   - awalesushil/biomed-qa
   - awalesushil/arxiv-knowledge-repo
   - awalesushil/indore
   - awalesushil/rasa_tmc_bot
-  - awalesushil/morphology-segmentation

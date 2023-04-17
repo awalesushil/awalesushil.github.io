@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-06-01
+date: 2023-03-13
 inline: true
 ---
 
-Our paper [Enriching Hindi WordNet Using Knowledge Graph Completion Approach](https://aclanthology.org/2022.eurali-1.13) (Awale & Jana, EURALI 2022) accepted in EURALI Workshop at LREC 2022
+Our paper [DBLP-QuAD: A Question Answering Dataset over the DBLP Scholarly Knowledge Graph](https://arxiv.org/abs/2303.13351) (Banerjee et. al., BIR 2023) accepted in BIR Workshop at ECIR 2023

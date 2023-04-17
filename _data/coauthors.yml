@@ -1,3 +1,19 @@
+"Banerjee":
+  - firstname: ["Debayan", "D.", "D. B.", "Debayan Banerjee"]
+    url: https://debayan.github.io/
+
+"Biemann":
+  - firstname: ["Chris", "C.", "C. B.", "Chris Biemann"]
+    url: https://www.inf.uni-hamburg.de/en/inst/ab/lt/people/chris-biemann.html
+
 "Jana":
   - firstname: ["Abhik", "A.", "A. J.", "Abhik Jana"]
     url: https://scholar.google.com/citations?user=D0DaFlEAAAAJ
+
+"Usbeck":
+  - firstname: ["Ricardo", "R.", "R. U.", "Ricardo Usbeck"]
+    url: https://www.inf.uni-hamburg.de/en/inst/ab/sems/people/ricardo-usbeck.html
+
+"Yimam":
+  - firstname: ["Seid", "S.", "S. M. Y", "Seid Muhie Yimam"]
+    url: https://seyyaw.github.io/  
