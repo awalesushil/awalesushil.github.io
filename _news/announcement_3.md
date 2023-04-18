@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-01-01
+date: 2023-04-15
 inline: true
 ---
 
-Started working as Research Associate at TIB, Hannover, Germany
+Started working as Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover, Germany
