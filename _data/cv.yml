@@ -33,7 +33,7 @@
     - title: <a href="https://github.com/awalesushil/DBLP-QuAD">DBLP-QuAD</a>
       year: 2023
       description: Scholarly Question Answering dataset consisting of 10,000 questions and corresponding SPARQL queries
-    - title: <a href="https://github.com/awalesushil/DBLP-QuAD">DBLP-QuAD</a>
+    - title: <a href="https://github.com/awalesushil/biomed-qa">Biomed QA</a>
       year: 2022
       description: Information Retrieval-Based Biomedical Question Answering System using Elasticsearch and BERT
 
