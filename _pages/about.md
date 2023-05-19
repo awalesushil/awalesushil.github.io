@@ -15,6 +15,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover, Germany. I'm currently working on Multimodal Information Retrieval systems. Previously, I worked as a Student Assistant in [Language Technology Group](https://www.inf.uni-hamburg.de/en/inst/ab/lt/home.html), Universität Hamburg building an intelligent scholarly system powered by Natural Language Processing (NLP). My area of interest lies in IR, NLP, and Semantic Web technologies.
+I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover and a PhD candidate at Lebniz Universität Hannover. I'm supervised by [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth). My research interests are in Multimodal Information Retrieval, Question Answering and Knowledge Graphs.
+
+Previously, I worked as a Student Assistant in the [Language Technology Group](https://www.inf.uni-hamburg.de/en/inst/ab/lt/home.html), Universität Hamburg building an intelligent scholarly system powered by Natural Language Processing (NLP).
 
 I completed my Masters in Machine Learning from [Universität Hamburg](https://master-intelligent-adaptive-systems.com/), Germany in 2023 and my Bachelors in Computer Science in 2020 from [Tribhuwan University](http://tribhuvan-university.edu.np/), Nepal. 
