@@ -6,6 +6,14 @@
   - firstname: ["Chris", "C.", "C. B.", "Chris Biemann"]
     url: https://www.inf.uni-hamburg.de/en/inst/ab/lt/people/chris-biemann.html
 
+"Müller-Budack":
+  - firstname: ["Eric", "E.", "E. M.", "Eric Müller-Budack"]
+    url: https://eric-mb.github.io/
+
+"Ewerth":
+  - firstname: ["Ralph", "R.", "R. E.", "Ralph Ewerth"]
+    url: https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth
+
 "Jana":
   - firstname: ["Abhik", "A.", "A. J.", "Abhik Jana"]
     url: https://scholar.google.com/citations?user=D0DaFlEAAAAJ
