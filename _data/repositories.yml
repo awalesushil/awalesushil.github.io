@@ -3,8 +3,8 @@ github_users:
 
 github_repos:
   - TIBHannover/patent-figure-classification
+  - TIBHannover/iPatent
   - awalesushil/DBLP-QuAD
   - uhh-lt/hindi-wordnet-extension
   - awalesushil/biomed-qa
-  - awalesushil/arxiv-knowledge-repo
-  - awalesushil/indore
+  - awalesushil/morphology-segmentation
