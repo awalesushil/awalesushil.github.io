@@ -13,6 +13,7 @@ description: >
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  <a href="/privacy/">Privacy</a> · <a href="/datenschutz/">Datenschutz</a>
 keywords: Sushil Awale, multimodal information retrieval, vision-language models, patent search, patent image retrieval, cultural heritage, knowledge graphs, NLP, TIB Hannover, Leibniz Universität Hannover
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico
@@ -35,7 +36,7 @@ repo_theme_dark: dark # https://github.com/stats-organization/github-stats-exten
 # `user@host` and no `mailto:` for harvesters to scrape, and clicking one copies
 # it to the clipboard instead of opening a mail client.
 # See "Protecting email addresses from scrapers" in docs/CUSTOMIZE.md.
-protect_email: false
+protect_email: true
 
 # Off by default: the free public github-profile-trophy instance is disabled
 # (its Vercel deployment answers HTTP 402 / DEPLOYMENT_DISABLED), so every trophy
@@ -125,6 +126,8 @@ analytics:
   pirsch: # your Pirsch analytics site ID (length 32 characters)
   openpanel: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
   cloudflare: # your Cloudflare Web Analytics beacon token (32 hex characters)
+email: mail@sushilawale.com # shown only via spam protection (privacy page, CV)
+goatcounter_code: sushilawale # GoatCounter site code (https://<code>.goatcounter.com); empty = no analytics
 enable_simple_analytics: false # Simple Analytics identifies a site by its domain, so it has no ID to set above
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
@@ -214,6 +217,8 @@ kramdown:
 include: ["_pages"]
 exclude:
   - .al-folio-overrides.yml
+  - requirements.txt
+  - assets/rendercv/
   - AGENTS.md
   - al-folio-upgrade-report.md
   - bin/
@@ -367,7 +372,7 @@ scholar:
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
   altmetric: false
-  dimensions: true
+  dimensions: false
   google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
   inspirehep: false
 
@@ -466,7 +471,7 @@ enable_tooltips: false # enables automatic tooltip links generated for each sect
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
-enable_medium_zoom: true # enables image zoom feature (as on medium.com)
+enable_medium_zoom: false # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
@@ -478,7 +483,7 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # The integrity hash is used to ensure that the library is not tampered with.
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
-  download: false # if true, download the versions of the libraries specified below and use the downloaded files
+  download: true # if true, download the versions of the libraries specified below and use the downloaded files
   bootstrap-table:
     integrity:
       css: "sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="

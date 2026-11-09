@@ -4,7 +4,7 @@ title: über mich
 permalink: /de/
 lang: de
 alternate: /
-subtitle: Research Associate, Forschungsgruppe Visual Analytics, TIB.
+subtitle: Wissenschaftlicher Mitarbeiter, Forschungsgruppe Visual Analytics, TIB.
 description: Forschung zu multimodalem Information Retrieval mit Vision-Language-Modellen für Patente und Kulturerbe, an der TIB Hannover und der Universität Marburg, Promotion an der Leibniz Universität Hannover.
 sitemap: true
 
@@ -27,7 +27,7 @@ latest_posts:
   enabled: false
 ---
 
-Ich forsche in der [Forschungsgruppe Visual Analytics](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) der TIB in Hannover und promoviere an der Leibniz Universität Hannover. Seit Dezember 2025 forsche ich außerdem im Team [Multimodal Modelling and Machine Learning (M3L)](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) an der Universität Marburg. Betreut wird meine Promotion von [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).
+Ich bin wissenschaftlicher Mitarbeiter in der [Forschungsgruppe Visual Analytics](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) der TIB in Hannover und Doktorand an der Leibniz Universität Hannover. Seit Dezember 2025 bin ich außerdem wissenschaftlicher Mitarbeiter im Team [Multimodal Modelling and Machine Learning (M3L)](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) an der Universität Marburg. Betreut wird meine Promotion von [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).
 
 In meiner Forschung beschäftige ich mich mit multimodalem Information Retrieval für wissenschaftliche, technische und kulturelle Bereiche. Ich entwickle Suchsysteme auf Basis von Vision-Language-Modellen, die die Recherche in Patenten unterstützen und den Zugang zu Kulturerbe verbessern. Außerdem interessiere ich mich für Domänenanpassung für bessere multimodale Repräsentationen, Wissensgraphen und Natural Language Processing.
 

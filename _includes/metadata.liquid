@@ -124,6 +124,8 @@
       {%- if so.dblp_url -%}{{ so.dblp_url }},{%- endif -%}
       {%- if so.github_username -%}https://github.com/{{ so.github_username }},{%- endif -%}
       {%- if so.linkedin_username -%}https://www.linkedin.com/in/{{ so.linkedin_username }},{%- endif -%}
+      {%- if so.wikidata_id -%}https://www.wikidata.org/wiki/{{ so.wikidata_id }},{%- endif -%}
+      {%- for u in site.data.person.profile_pages -%}{{ u }},{%- endfor -%}
     {%- endcapture -%}
     {%- assign sameaslinks = sameas_csv | split: "," -%}
 
@@ -188,6 +190,17 @@
         "author": {{ person_json }}
         {%- endif %}
         {%- endif %}
+      }
+    </script>
+{%- endif %}
+{%- if site.goatcounter_code and jekyll.environment == 'production' %}
+    <script>
+      if (location.hostname === {{ site.url | split: '//' | last | jsonify }}) {
+        var gc = document.createElement('script');
+        gc.async = true;
+        gc.src = 'https://gc.zgo.at/count.js';
+        gc.dataset.goatcounter = 'https://{{ site.goatcounter_code }}.goatcounter.com/count';
+        document.head.appendChild(gc);
       }
     </script>
 {%- endif %}
