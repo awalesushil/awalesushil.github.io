@@ -1,0 +1,57 @@
+---
+permalink: /llms.txt
+layout: none
+sitemap: false
+---
+{%- assign person = site.data.person -%}
+{%- capture full_name -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
+# {{ full_name }}
+
+> {{ person.summary | normalize_whitespace }}
+
+- Role: {{ person.job_title }}, {{ person.works_for.name }}
+- Location: {{ person.location }}
+- Research interests: {{ person.knows_about | join: ", " }}
+{%- for a in person.awards %}
+- Award: {{ a }}
+{%- endfor %}
+- Contact: {{ site.contact_note | strip }} https://www.linkedin.com/in/{{ site.linkedin_username }}
+
+## Pages
+
+- [About]({{ '/' | absolute_url }}): biography, news, selected publications
+- [Publications]({{ '/publications/' | absolute_url }}): full publication list
+- [Code & projects]({{ '/repositories/' | absolute_url }}): open-source code, datasets, demos and tutorials
+- [CV]({{ '/cv/' | absolute_url }}): education and experience
+- [News]({{ '/news/' | absolute_url }}): all updates
+
+## Publications
+{% capture pubs %}{% bibliography -f papers --template llms_bib %}{% endcapture %}
+{%- assign items = pubs | strip_html | split: "@@ITEM@@" -%}
+{%- for it in items offset: 1 %}
+- {{ it | normalize_whitespace | strip }}
+{%- endfor %}
+
+## Code, datasets and demos
+{% for p in site.data.featured_projects %}
+- [{{ p.name }}]({{ p.demo | default: p.website | default: p.code }}): {{ p.description }}{% if p.venue %} ({{ p.venue }}){% endif %}{% if p.code and p.demo %} Code: {{ p.code }}{% endif %}
+{%- endfor %}
+
+## Education
+{% for a in person.alumni_of %}
+- {{ a.degree }}, {{ a.name }}
+{%- endfor %}
+
+## Recent news
+{% assign news = site.news | sort: "date" | reverse %}{% for item in news %}
+- {{ item.date | date: "%Y-%m-%d" }}: {{ item.content | strip_html | normalize_whitespace }}
+{%- endfor %}
+
+## Profiles
+
+- Google Scholar: https://scholar.google.com/citations?user={{ site.scholar_userid }}
+- Semantic Scholar: https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}
+- ORCID: https://orcid.org/{{ site.orcid_id }}
+- DBLP: {{ site.dblp_url }}
+- GitHub: https://github.com/{{ site.github_username }}
+- LinkedIn: https://www.linkedin.com/in/{{ site.linkedin_username }}

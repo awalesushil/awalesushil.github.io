@@ -1,0 +1,34 @@
+job_title: Research Associate and PhD Candidate
+summary: >-
+  Sushil Awale is a Research Associate in the Visual Analytics Research Group at TIB – Leibniz
+  Information Centre for Science and Technology in Hannover, Germany, and a PhD candidate at Leibniz
+  Universität Hannover, supervised by Prof. Dr. Ralph Ewerth, and a member of the Multimodal
+  Modelling and Machine Learning (M3L) team at Universität Marburg. Research focus: multimodal
+  information retrieval for scientific, technical and cultural domains, building search systems with
+  vision-language models for patents and cultural heritage collections.
+works_for:
+  name: TIB – Leibniz Information Centre for Science and Technology
+  url: https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics
+affiliations:
+  - name: Leibniz Universität Hannover
+    url: https://www.uni-hannover.de/
+  - name: Universität Marburg
+    url: https://www.uni-marburg.de/
+alumni_of:
+  - name: Universität Hamburg
+    degree: M.Sc. Intelligent Adaptive Systems (2023)
+  - name: Tribhuvan University
+    degree: B.Sc. Computer Science and Information Technology (2020)
+knows_about:
+  - Multimodal information retrieval
+  - Vision-language models
+  - Patent search
+  - Patent image retrieval
+  - Cultural heritage
+  - Bias in vision-language models
+  - Knowledge graphs
+  - Question answering
+  - Natural language processing
+awards:
+  - Best Poster Paper Award, ACM Web Science Conference 2026
+location: Hannover, Germany

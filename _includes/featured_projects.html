@@ -1,0 +1,22 @@
+<div class="featured-grid">
+{%- for p in site.data.featured_projects %}
+  {%- if include.home and p.home != true %}{% continue %}{% endif %}
+  <article class="featured-card">
+    <h3 class="featured-name">
+      {%- assign main_link = p.demo | default: p.website | default: p.code -%}
+      <a href="{{ main_link }}">{{ p.name }}</a>
+    </h3>
+    {%- if p.venue %}<p class="featured-venue">{{ p.venue }}</p>{% endif %}
+    <p class="featured-desc">{{ p.description }}</p>
+    {%- if p.tags %}
+    <ul class="featured-tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+    {%- endif %}
+    <div class="featured-links">
+      {%- if p.code %}<a href="{{ p.code }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+      {%- if p.demo %}<a href="{{ p.demo }}"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
+      {%- if p.website %}<a href="{{ p.website }}"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Materials</a>{% endif %}
+      {%- if p.paper %}<a href="{{ p.paper }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+    </div>
+  </article>
+{%- endfor %}
+</div>

@@ -2,8 +2,8 @@
 layout: page
 permalink: /publications/
 title: publications
-description: 
-years: [2025, 2023, 2022]
+description: Peer-reviewed publications by Sushil Awale on multimodal information retrieval, vision-language models, patent search, cultural heritage and scholarly knowledge graphs.
+years: [2026, 2025, 2023, 2022]
 nav: true
 nav_order: 1
 ---

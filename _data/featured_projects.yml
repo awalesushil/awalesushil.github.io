@@ -1,0 +1,52 @@
+- name: iPatent
+  repo: TIBHannover/iPatent
+  description: Interactive search system for multimodal patent image search and interpretation, with clustering for exploring results. Live demo hosted by TIB.
+  tags: [multimodal retrieval, patent search, vision-language models]
+  code: https://github.com/TIBHannover/iPatent
+  demo: https://service.tib.eu/ipatent/
+  paper: https://ceur-ws.org/Vol-4062/paper8.pdf
+  venue: PatentSemTech @ SIGIR 2025
+  home: true
+
+- name: Patent Figure Classification
+  repo: TIBHannover/patent-figure-classification
+  description: Official code for the ECIR 2025 paper on classifying patent figures with large vision-language models.
+  tags: [vision-language models, classification, patents]
+  code: https://github.com/TIBHannover/patent-figure-classification
+  paper: https://doi.org/10.1007/978-3-031-88711-6_2
+  venue: ECIR 2025
+  home: true
+
+- name: Fusing Vision and Language Tutorial
+  description: Full-day hands-on tutorial on vision-language models for multimodal content analysis, with slides and notebooks.
+  tags: [tutorial, vision-language models]
+  website: https://tib-visual-analytics.github.io/Konvens2025-FusingLanguageWithVision/
+  venue: KONVENS 2025
+  home: true
+
+- name: DBLP-QuAD
+  repo: awalesushil/DBLP-QuAD
+  description: 10,000 question-answer pairs with SPARQL queries over the DBLP scholarly knowledge graph, for knowledge graph question answering.
+  tags: [dataset, knowledge graphs, question answering]
+  code: https://github.com/awalesushil/DBLP-QuAD
+  paper: https://ceur-ws.org/Vol-3617/paper-05.pdf
+  venue: BIR @ ECIR 2023
+  home: true
+
+- name: Hindi WordNet Extension
+  repo: uhh-lt/hindi-wordnet-extension
+  description: Enriching Hindi WordNet using knowledge graph completion approaches.
+  tags: [knowledge graphs, NLP, low-resource languages]
+  code: https://github.com/uhh-lt/hindi-wordnet-extension
+
+- name: Patent Search on CLEF-IP
+  repo: awalesushil/patent-search-clefip
+  description: Multimodal patent search application demo for the CLEF-IP dataset.
+  tags: [multimodal retrieval, patent search]
+  code: https://github.com/awalesushil/patent-search-clefip
+
+- name: Biomedical QA
+  repo: awalesushil/biomed-qa
+  description: Information retrieval-based biomedical question answering system using Elasticsearch and BERT.
+  tags: [question answering, information retrieval]
+  code: https://github.com/awalesushil/biomed-qa
