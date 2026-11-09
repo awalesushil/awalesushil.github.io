@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% if lang == 'de' %}{% assign news_url = '/de/neuigkeiten/' %}{% assign projects_url = '/de/projekte/' %}{% else %}{% assign news_url = '/news/' %}{% assign projects_url = '/repositories/' %}{% endif %}
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -43,7 +46,7 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ news_url | relative_url }}" style="color: inherit">{{ t.news }}</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -59,17 +62,17 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">{{ t.selected_publications }}</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
     {% if page.featured_projects %}
       <h2>
-        <a href="{{ '/repositories/' | relative_url }}" style="color: inherit">code &amp; projects</a>
+        <a href="{{ projects_url | relative_url }}" style="color: inherit">{{ t.code_projects }}</a>
       </h2>
       {% include featured_projects.liquid home=true %}
-      <p class="news-more"><a href="{{ '/repositories/' | relative_url }}">all projects &rarr;</a></p>
+      <p class="news-more"><a href="{{ projects_url | relative_url }}">{{ t.all_projects }} &rarr;</a></p>
     {% endif %}
 
     <!-- Social -->

@@ -1,4 +1,6 @@
 ---
+lang: en
+alternate: /de/
 layout: about
 title: about
 permalink: /

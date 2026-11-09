@@ -1,4 +1,8 @@
 ---
+lang: en
+alternate: /de/lebenslauf/
+de_url: /de/lebenslauf/
+de_title: Lebenslauf
 layout: cv
 permalink: /cv/
 title: cv

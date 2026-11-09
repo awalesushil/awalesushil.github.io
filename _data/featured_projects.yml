@@ -1,6 +1,7 @@
 - name: iPatent
   repo: TIBHannover/iPatent
   description: Interactive search system for multimodal patent image search and interpretation, with clustering for exploring results. Live demo hosted by TIB.
+  description_de: Interaktives Suchsystem für die multimodale Suche und Interpretation von Patentbildern, mit Clustering zur Exploration der Ergebnisse. Live-Demo an der TIB.
   tags: [multimodal retrieval, patent search, vision-language models]
   code: https://github.com/TIBHannover/iPatent
   demo: https://service.tib.eu/ipatent/
@@ -11,6 +12,7 @@
 - name: Patent Figure Classification
   repo: TIBHannover/patent-figure-classification
   description: Code and the PatFigCLS / PatFigVQA datasets for classifying patent figures by type, projection, patent class and object with large vision-language models, including a tournament-style multiple-choice strategy for large label sets.
+  description_de: Code und die Datensätze PatFigCLS / PatFigVQA zur Klassifikation von Patentzeichnungen nach Typ, Projektion, Patentklasse und Objekt mit großen Vision-Language-Modellen, einschließlich einer turnierartigen Multiple-Choice-Strategie für große Label-Mengen.
   tags: [vision-language models, classification, patents]
   code: https://github.com/TIBHannover/patent-figure-classification
   paper: /publications/awale2025patfig/
@@ -21,6 +23,7 @@
 - name: CARA
   repo: TIBHannover/CARA
   description: Open-source tool for building relevance judgments for image retrieval test collections. Annotators judge pools in groups of similar images, and a built-in simulator compares grouping settings before a study starts.
+  description_de: Open-Source-Werkzeug für Relevanzbewertungen beim Aufbau von Testkollektionen im Bild-Retrieval. Bewertet wird in Gruppen ähnlicher Bilder; ein integrierter Simulator vergleicht Gruppierungseinstellungen vor Beginn einer Studie.
   tags: [relevance assessment, image retrieval, evaluation]
   code: https://github.com/TIBHannover/CARA
   docs: https://tibhannover.github.io/CARA/
@@ -29,6 +32,7 @@
 
 - name: Colonial-Context VLM Bias Dataset
   description: Annotated historical photographs for measuring gender and skin-tone retrieval bias of vision-language models in archival collections.
+  description_de: Annotierte historische Fotografien, mit denen sich Gender- und Hautfarben-Bias von Vision-Language-Modellen bei der Suche in Archivbeständen messen lässt.
   tags: [dataset, bias, cultural heritage, vision-language models]
   dataset: https://doi.org/10.5281/zenodo.19455764
   paper: /publications/awale2026websci/
@@ -37,6 +41,7 @@
 
 - name: Fusing Vision and Language Tutorial
   description: Full-day hands-on tutorial on vision-language models for multimodal content analysis, with slides and notebooks.
+  description_de: Ganztägiges Praxis-Tutorial zu Vision-Language-Modellen für die multimodale Inhaltsanalyse, mit Folien und Notebooks.
   tags: [tutorial, vision-language models]
   website: https://tib-visual-analytics.github.io/Konvens2025-FusingLanguageWithVision/
   venue: KONVENS 2025
@@ -45,6 +50,7 @@
 - name: DBLP-QuAD
   repo: awalesushil/DBLP-QuAD
   description: 10,000 question-answer pairs with SPARQL queries over the DBLP scholarly knowledge graph, for knowledge graph question answering.
+  description_de: 10.000 Frage-Antwort-Paare mit SPARQL-Abfragen über den wissenschaftlichen Wissensgraphen DBLP, für Question Answering über Wissensgraphen.
   tags: [dataset, knowledge graphs, question answering]
   code: https://github.com/awalesushil/DBLP-QuAD
   paper: /publications/banerjee2023dblpquad/
@@ -55,17 +61,20 @@
 - name: Hindi WordNet Extension
   repo: uhh-lt/hindi-wordnet-extension
   description: Enriching Hindi WordNet using knowledge graph completion approaches.
+  description_de: Erweiterung des Hindi-WordNet mit Verfahren zur Vervollständigung von Wissensgraphen.
   tags: [knowledge graphs, NLP, low-resource languages]
   code: https://github.com/uhh-lt/hindi-wordnet-extension
 
 - name: Patent Search on CLEF-IP
   repo: awalesushil/patent-search-clefip
   description: Multimodal patent search application demo for the CLEF-IP dataset.
+  description_de: Demo-Anwendung für multimodale Patentsuche auf dem CLEF-IP-Datensatz.
   tags: [multimodal retrieval, patent search]
   code: https://github.com/awalesushil/patent-search-clefip
 
 - name: Biomedical QA
   repo: awalesushil/biomed-qa
   description: Information retrieval-based biomedical question answering system using Elasticsearch and BERT.
+  description_de: Retrieval-basiertes Question-Answering-System für biomedizinische Fragen mit Elasticsearch und BERT.
   tags: [question answering, information retrieval]
   code: https://github.com/awalesushil/biomed-qa

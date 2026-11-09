@@ -1,3 +1,5 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
@@ -9,11 +11,14 @@
     {% endif %}
     <ul class="news-list">
       {% for item in news limit: news_limit %}
+        {% assign month_index = item.date | date: '%-m' | minus: 1 %}
         <li class="news-item{% if item.highlight %} news-highlight news-{{ item.highlight }}{% endif %}">
-          <time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %Y' }}</time>
+          <time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ t.months[month_index] }} {{ item.date | date: '%Y' }}</time>
           <div class="news-body">
-            {% if item.highlight == 'award' %}<span class="news-tag"><i class="fa-solid fa-trophy" aria-hidden="true"></i> award</span>{% endif %}
-            {% if item.inline %}
+            {% if item.highlight == 'award' %}<span class="news-tag"><i class="fa-solid fa-trophy" aria-hidden="true"></i> {% if lang == 'de' %}Auszeichnung{% else %}award{% endif %}</span>{% endif %}
+            {% if lang == 'de' and item.de %}
+              {{ item.de | markdownify | remove: '<p>' | remove: '</p>' }}
+            {% elsif item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
             {% else %}
               <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
@@ -23,7 +28,8 @@
       {% endfor %}
     </ul>
     {% if news_size > news_limit %}
-      <p class="news-more"><a href="{{ '/news/' | relative_url }}">all news ({{ news_size }}) &rarr;</a></p>
+      {% if lang == 'de' %}{% assign news_url = '/de/neuigkeiten/' %}{% else %}{% assign news_url = '/news/' %}{% endif %}
+      <p class="news-more"><a href="{{ news_url | relative_url }}">{{ t.all_news }} ({{ news_size }}) &rarr;</a></p>
     {% endif %}
   {% else %}
     <p>No news so far...</p>

@@ -21,6 +21,7 @@ sitemap: false
 - [Code & projects]({{ '/repositories/' | absolute_url }}): open-source code, datasets, demos and tutorials
 - [CV]({{ '/cv/' | absolute_url }}): education and experience
 - [News]({{ '/news/' | absolute_url }}): all updates
+- German version: [Startseite]({{ '/de/' | absolute_url }}), [Lebenslauf]({{ '/de/lebenslauf/' | absolute_url }}), [Projekte]({{ '/de/projekte/' | absolute_url }}), [Neuigkeiten]({{ '/de/neuigkeiten/' | absolute_url }})
 
 ## Publications
 {% capture pubs %}{% bibliography -f papers --template llms_bib %}{% endcapture %}

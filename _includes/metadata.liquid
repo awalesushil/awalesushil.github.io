@@ -75,6 +75,12 @@
     {%- if e.abstract %}<meta name="citation_abstract" content="{{ e.abstract | unbrace | strip_newlines | escape }}" />{% endif %}
 {%- endif %}
 
+{%- if page.alternate %}
+    {%- if page.lang == 'de' -%}{%- assign alt_lang = 'en' -%}{%- else -%}{%- assign alt_lang = 'de' -%}{%- endif %}
+    <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url | absolute_url }}" />
+    <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ page.alternate | absolute_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{% if page.lang == 'de' %}{{ page.alternate | absolute_url }}{% else %}{{ page.url | absolute_url }}{% endif %}" />
+{%- endif %}
 {%- if page.entry.preview -%}
   {%- assign og_image_url = page.entry.preview | prepend: '/assets/img/publication_preview/' | absolute_url -%}
 {%- else -%}
@@ -91,7 +97,7 @@
     {% if page.og_image or site.og_image -%}
     <meta property="og:image" content="{{ og_image_url }}" />
     {%- endif %}
-    <meta property="og:locale" content="{{ site.lang }}" />
+    <meta property="og:locale" content="{% if page.lang == 'de' %}de_DE{% else %}en_US{% endif %}" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />

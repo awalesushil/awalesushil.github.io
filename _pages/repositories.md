@@ -1,4 +1,8 @@
 ---
+lang: en
+alternate: /de/projekte/
+de_url: /de/projekte/
+de_title: Code & Projekte
 layout: page
 permalink: /repositories/
 title: code & projects

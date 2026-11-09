@@ -1,4 +1,6 @@
 ---
+lang: en
+alternate: /de/neuigkeiten/
 layout: page
 title: news
 permalink: /news/

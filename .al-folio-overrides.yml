@@ -1,26 +1,40 @@
 ---
 version: 1
 overrides:
+  _includes/cv/render.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.2
+    upstream_path: templates/cv/render.liquid
+    upstream_sha256: eaff444ab8d7407008e422ecc4be3c56c586fe2397951d54dbfb6aef7fc2eac0
+    local_sha256: af7163b79f77d92915cea4340141d6dd29f1189d0f94269849328ce9d152da2b
+    acknowledged_at: '2026-11-09'
+  _includes/header.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.15
+    upstream_path: _includes/header.liquid
+    upstream_sha256: c8663513baded68d9fa5fbe4d6363a976535bbe201efe5138243d0ff03101058
+    local_sha256: 255fa0b40cb122559eb51a3998c77680710ae0f62d763f5e4e7161c96e5fd91b
+    acknowledged_at: '2026-11-09'
   _includes/metadata.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _includes/metadata.liquid
     upstream_sha256: 1446b2572062335b5fc44e16b6090ff197e03b3503009660f79a6a39cd383584
-    local_sha256: bad3f3cacb839b3bbeaaf0a47d78aae3194fee8e95fd71032483f245679b3103
+    local_sha256: fd49085229f0f0229f44cda625f71e2c98fb311d252eb7459b77b2a43b2c1dea
     acknowledged_at: '2026-11-09'
   _includes/news.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _includes/news.liquid
     upstream_sha256: 2a37611539b5b3d59050cc20b8d008ca070e253d953724f6499a422e9b186f63
-    local_sha256: 64f07e956123076b252d4406a7200bf7779c60c92fff9419e285c2211907e13e
+    local_sha256: ddbd5d412271d3d094573eb9292077fa42b6ae5a695e4b1758f1ecfc7915947f
     acknowledged_at: '2026-11-09'
   _layouts/about.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/about.liquid
     upstream_sha256: 2c28eb83b71fe65f252202c11f0b4a19a9b6f1faccdc870b4f91c4ea51d0c6f1
-    local_sha256: fd2a3077afec89301d95fbbb9d60aea3076f3a34f34989660881b08249bd5477
+    local_sha256: 157310b2c875325784f3e9dfbc0306ed5d554d0b4e1a86539cf177d669137ab1
     acknowledged_at: '2026-11-09'
   _layouts/bib.liquid:
     owner: al_folio_core
@@ -28,6 +42,13 @@ overrides:
     upstream_path: _layouts/bib.liquid
     upstream_sha256: f3c547969ef76219ca1eb21df09dce5a3daf32a1f491b1586f68e3213fa35f53
     local_sha256: 5caf771772502a5e6dc28543b393903ebc865eb088f211fc97156a5cb4091875
+    acknowledged_at: '2026-11-09'
+  _layouts/default.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.15
+    upstream_path: _layouts/default.liquid
+    upstream_sha256: '0871ab2e3315fc4c9dd5b9706cbd2129fcefa27003f60dfcc882f2aee23b247c'
+    local_sha256: a669137420f3fd69adccaf0b6d47831067a6640ae2d2fde021eb50b46288c8d3
     acknowledged_at: '2026-11-09'
   assets/css/main.scss:
     owner: al_folio_core

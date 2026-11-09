@@ -1,0 +1,101 @@
+cv:
+  name: Sushil Awale
+  label: Research Associate, Promotion an der Leibniz Universität Hannover
+  email: mail@sushilawale.com
+  location: Hannover, Deutschland
+  website: https://sushilawale.com
+  image: ""
+  summary: Forschung zu multimodalem Information Retrieval für wissenschaftliche, technische und kulturelle Bereiche; Entwicklung von Suchsystemen auf Basis von Vision-Language-Modellen für Patente und Kulturerbe-Sammlungen.
+
+  social_networks:
+    - network: GitHub
+      username: awalesushil
+    - network: LinkedIn
+      username: sushilawale
+    - network: Google Scholar
+      username: YYO3U8UAAAAJ
+    - network: ORCID
+      username: 0000-0003-2575-0134
+
+  sections:
+    Education:
+      - institution: Leibniz Universität Hannover
+        location: Hannover, Deutschland
+        url: https://www.uni-hannover.de/
+        area: Informatik
+        studyType: Promotion
+        start_date: 2023-04
+        end_date: present
+        highlights:
+          - "Betreuung: Prof. Dr. Ralph Ewerth"
+
+      - institution: Universität Hamburg
+        location: Hamburg, Deutschland
+        url: https://master-intelligent-adaptive-systems.com/
+        area: Intelligent Adaptive Systems
+        studyType: M.Sc.
+        date: 2023
+
+      - institution: Tribhuvan University
+        location: Kathmandu, Nepal
+        area: Informatik und Informationstechnologie
+        studyType: B.Sc.
+        date: 2020
+
+    Experience:
+      - company: Universität Marburg
+        position: Wissenschaftlicher Mitarbeiter, Multimodal Modelling and Machine Learning (M3L)
+        location: Marburg, Deutschland
+        start_date: 2025-12
+        end_date: present
+
+      - company: TIB – Leibniz-Informationszentrum Technik und Naturwissenschaften
+        position: Wissenschaftlicher Mitarbeiter, Forschungsgruppe Visual Analytics
+        location: Hannover, Deutschland
+        start_date: 2023-04
+        end_date: present
+        summary: Multimodales Information Retrieval für Patente und Kulturerbe-Sammlungen mit Vision-Language-Modellen.
+
+      - company: Language Technology Group, Universität Hamburg
+        position: Studentische Hilfskraft
+        location: Hamburg, Deutschland
+        start_date: 2022-01
+        end_date: 2023-03
+        summary: Entwicklung eines intelligenten Systems für wissenschaftliche Literatur auf Basis von Natural Language Processing.
+
+    Awards:
+      - title: Best Poster Paper Award
+        date: 2026-05
+        awarder: ACM Web Science Conference 2026
+        url: https://sushilawale.com/publications/awale2026websci/
+        summary: Für „Examining Gender and Racial Bias in Vision-language Models within Colonial Contexts“.
+
+    Projects:
+      - name: CARA
+        summary: Werkzeug zur clustergestützten Relevanzbewertung für den Aufbau von Testkollektionen im Bild-Retrieval.
+        url: https://github.com/TIBHannover/CARA
+        date: 2026
+      - name: "Tutorial: Fusing Vision and Language (KONVENS 2025)"
+        summary: Ganztägiges Praxis-Tutorial zu Vision-Language-Modellen für die multimodale Inhaltsanalyse, mit Eric Müller-Budack, Hildesheim.
+        url: https://tib-visual-analytics.github.io/Konvens2025-FusingLanguageWithVision/
+        date: 2025-09
+      - name: iPatent
+        summary: Interaktives System für die multimodale Suche und Interpretation von Patentbildern, mit einer von der TIB betriebenen Live-Demo.
+        url: https://github.com/TIBHannover/iPatent
+        date: 2025
+      - name: Patent Figure Classification
+        summary: Code und die Datensätze PatFigCLS / PatFigVQA zur Klassifikation von Patentzeichnungen mit Vision-Language-Modellen.
+        url: https://github.com/TIBHannover/patent-figure-classification
+        date: 2025
+      - name: DBLP-QuAD
+        summary: Question-Answering-Datensatz mit 10.000 Fragen und SPARQL-Abfragen über den DBLP-Wissensgraphen.
+        url: https://github.com/awalesushil/DBLP-QuAD
+        date: 2023
+
+    Languages:
+      - name: Gesprochen
+        summary: Englisch, Nepali, Newari, Hindi, Deutsch
+
+    Interests:
+      - name: Hobbys
+        keywords: "Fußball, Radfahren, Kochen"
