@@ -12,9 +12,6 @@ sitemap: false
 - Role: {{ person.job_title }}, {{ person.works_for.name }}
 - Location: {{ person.location }}
 - Research interests: {{ person.knows_about | join: ", " }}
-{%- for a in person.awards %}
-- Award: {{ a }}
-{%- endfor %}
 - Contact: {{ site.contact_note | strip }} https://www.linkedin.com/in/{{ site.linkedin_username }}
 
 ## Pages
@@ -34,7 +31,7 @@ sitemap: false
 
 ## Code, datasets and demos
 {% for p in site.data.featured_projects %}
-- [{{ p.name }}]({{ p.demo | default: p.website | default: p.code }}): {{ p.description }}{% if p.venue %} ({{ p.venue }}){% endif %}{% if p.code and p.demo %} Code: {{ p.code }}{% endif %}
+- [{{ p.name }}]({{ p.demo | default: p.website | default: p.code | default: p.dataset }}): {{ p.description }}{% if p.venue %} ({{ p.venue }}){% endif %}{% if p.code and p.demo %} Code: {{ p.code }}{% endif %}{% if p.dataset %} Data: {{ p.dataset }}{% endif %}{% if p.paper %} Paper: {% if p.paper contains '://' %}{{ p.paper }}{% else %}{{ p.paper | absolute_url }}{% endif %}{% endif %}
 {%- endfor %}
 
 ## Education

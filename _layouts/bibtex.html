@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{%- assign entry = page.entry -%}
+{%- assign proceedings = "inproceedings, incollection" | split: ", " -%}
+<div class="post paper-page">
+  <header class="post-header">
+    <p class="paper-kicker">
+      {%- if entry.abbr %}<span class="badge paper-venue-badge">{{ entry.abbr }}</span>{% endif %}
+      {{ entry.year }}{% if entry.type == "article" %} · Journal article{% elsif proceedings contains entry.type %} · Conference paper{% endif %}
+    </p>
+    <h1 class="post-title paper-title">{{ entry.title | unbrace }}</h1>
+    <p class="paper-authors">
+      {%- for author in entry.author_array -%}
+        {%- assign last = author.last | remove: "¶" | remove: "&" | remove: "*" | remove: "†" | remove: "^" -%}
+        {%- assign is_self = false -%}
+        {%- if site.scholar.last_name contains last and site.scholar.first_name contains author.first -%}{%- assign is_self = true -%}{%- endif -%}
+        {%- assign coauthor_url = nil -%}
+        {%- if site.data.coauthors[last] -%}
+          {%- for c in site.data.coauthors[last] -%}{%- if c.firstname contains author.first -%}{%- assign coauthor_url = c.url -%}{%- break -%}{%- endif -%}{%- endfor -%}
+        {%- endif -%}
+        {%- if is_self -%}<strong>{{ author.first }} {{ author.last }}</strong>
+        {%- elsif coauthor_url -%}<a href="{{ coauthor_url }}">{{ author.first }} {{ author.last }}</a>
+        {%- else -%}{{ author.first }} {{ author.last }}{%- endif -%}
+        {%- unless forloop.last -%}, {% endunless -%}
+      {%- endfor -%}
+    </p>
+    <p class="paper-venue"><em>{% if entry.type == "article" %}{{ entry.journal }}{% if entry.volume %}, vol. {{ entry.volume }}{% endif %}{% else %}{{ entry.booktitle }}{% endif %}</em>{% if entry.pages %}, pp. {{ entry.pages | replace: "--", "–" }}{% endif %}{% if entry.publisher %}. {{ entry.publisher | unbrace }}{% endif %}.</p>
+    {%- if entry.award %}
+    <p><span class="award-badge"><i class="fas fa-trophy" aria-hidden="true"></i> {{ entry.award }}</span></p>
+    {%- endif %}
+  </header>
+
+  <div class="paper-links">
+    {%- if entry.arxiv %}<a class="btn btn-sm z-depth-0" href="https://arxiv.org/pdf/{{ entry.arxiv }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF (arXiv)</a>{% endif %}
+    {%- if entry.doi %}<a class="btn btn-sm z-depth-0" href="https://doi.org/{{ entry.doi }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Publisher (DOI)</a>
+    {%- elsif entry.url %}<a class="btn btn-sm z-depth-0" href="{{ entry.url }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+    {%- if entry.code %}<a class="btn btn-sm z-depth-0" href="{{ entry.code }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+    {%- if entry.dataset %}<a class="btn btn-sm z-depth-0" href="{{ entry.dataset }}"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
+    {%- if entry.demo %}<a class="btn btn-sm z-depth-0" href="{{ entry.demo }}"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
+    {%- if entry.blog %}<a class="btn btn-sm z-depth-0" href="{{ entry.blog | relative_url }}"><i class="fas fa-pen" aria-hidden="true"></i> Blog post</a>{% endif %}
+  </div>
+
+  {%- if entry.abstract %}
+  <section class="paper-section">
+    <h2>Abstract</h2>
+    <p class="paper-abstract">{{ entry.abstract | unbrace | replace: "\%", "%" }}</p>
+  </section>
+  {%- endif %}
+
+  <section class="paper-section">
+    <h2>Cite</h2>
+    <div class="paper-bibtex">
+      <button type="button" class="btn btn-sm z-depth-0 copy-bibtex" data-target="bibtex-{{ entry.key }}">Copy BibTeX</button>
+      <pre id="bibtex-{{ entry.key }}"><code>{{ entry.bibtex | hideCustomBibtex | strip | xml_escape }}</code></pre>
+    </div>
+  </section>
+
+  <p class="paper-back"><a href="{{ '/publications/' | relative_url }}">&larr; all publications</a></p>
+</div>
+<script>
+  document.querySelectorAll(".copy-bibtex").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = document.getElementById(b.dataset.target).innerText;
+      navigator.clipboard.writeText(t).then(function () {
+        b.textContent = "Copied";
+        setTimeout(function () { b.textContent = "Copy BibTeX"; }, 1500);
+      });
+    });
+  });
+</script>

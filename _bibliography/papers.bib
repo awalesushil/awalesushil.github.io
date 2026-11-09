@@ -1,7 +1,7 @@
 ---
 ---
 
-@inproceedings{AwaleGSRHRE2026, 
+@inproceedings{awale2026websci,
   abbr      = {WebSci},
   author    = {Awale, Sushil and
                Gavali, Omkar and
@@ -17,46 +17,38 @@
   year      = {2026},
   doi       = {10.1145/3795513.3807441},
   award     = {Best Poster Paper Award},
-  selected    = {true}
+  selected    = {true},
+  month     = {may},
+  dataset   = {https://doi.org/10.5281/zenodo.19455764},
+  abstract  = {Vision-language models (VLMs) are increasingly used for image retrieval in cultural heritage collections. Yet these models are trained and evaluated on modern web-scraped data which might cause unobserved biases when applied to historical imagery. While prior work has documented gender and racial biases in VLMs using contemporary datasets, no evaluation datasets exist for historical archives. In this paper, we address this gap by introducing a new dataset for evaluating demographic bias in VLMs on photograph collections from colonial contexts. Our dataset comprises annotated photographs for demographic queries spanning gender and skin tone. Using this dataset, we examine bias in multiple VLMs through retrieval performance across queries, measuring disparities using established information retrieval metrics. Experimental results show that gender biases documented in contemporary datasets persist on historical imagery, with all tested models retrieving certain demographic groups substantially better than others. Notably, models specifically trained for debiasing fail to mitigate bias on historical images and can introduce new racial retrieval disparities. These findings underscore the need for domain-specific debiasing approaches and caution against deploying off-the-shelf VLMs in archival contexts without proper evaluation.},
+  bibtex_show = {true}
 }
 
-@inproceedings{Awale25PatentSemTech, 
+@inproceedings{awale2025ipatent,
   abbr      = {PatentSemTech},
   author    = {Awale, Sushil and
                M{\"u}ller-Budack, Eric and
                Delaviz, Rahim and
                Ewerth, Ralph},
-  editor_   = {Ralf Krestel and
-               Hidir Aras and
-               Linda Andersson and
-               Florina Piroi and
-               Allan Hanbury and
-               Dean Alderucci},
   title     = {Exploring Patents Visually: An Interactive Search System for Multimodal Patent Image Search and Interpretation},
   booktitle = {Patent Text Mining and Semantic Technologies co-located with the {ACM} {SIGIR} Conference on Research and Development in Information Retrieval, {PatentSemTech}@{SIGIR} 2025, Padua, Italy, July 17, 2025},
-  series_   = {{CEUR} Workshop Proceedings},
-  volume_   = {4062},
   pages     = {76--83},
   publisher = {CEUR-WS.org},
   year      = {2025},
   url       = {https://ceur-ws.org/Vol-4062/paper8.pdf},
   selected    = {true},
-  code      = {https://github.com/TIBHannover/iPatent}
+  code      = {https://github.com/TIBHannover/iPatent},
+  month     = {jul},
+  demo      = {https://service.tib.eu/ipatent/},
+  abstract  = {Most patent retrieval systems are text-based, which under utilizes the multimodal nature of patent documents. Although a few multimodal patent retrieval systems exist, they fall short in providing efficient and informative visualizations, and facilitating the interpretation of retrieval results. To address these shortcomings, this paper presents iPatent, a novel web-based multimodal patent image retrieval system. Unlike previous solutions, iPatent integrates state-of-the-art deep learning models for fine-grained unimodal, cross-modal, and multimodal patent image retrieval. Additionally, it employs both traditional machine learning techniques and modern generative methods for interactive visual exploration and insightful interpretation of retrieval results. iPatent leverages modern web technologies to provide an interactive interface that enables users to explore large patent databases efficiently and in a visually informative way.},
+  bibtex_show = {true}
 }
 
-@inproceedings{AwalePatFigCLS2025, 
+@inproceedings{awale2025patfig,
   abbr      = {ECIR},
   author    = {Awale, Sushil and
                M{\"u}ller-Budack, Eric and
                Ewerth, Ralph},
-  editor_   = {Hauff, Claudia and
-               Macdonald, Craig and
-               Jannach, Dietmar and
-               Kazai, Gabriella and
-               Nardini, Franco Maria and
-               Pinelli, Fabio and
-               Silvestri, Fabrizio and
-               Tonellotto, Nicola},
   title     = {Patent Figure Classification Using Large Vision-Language Models},
   booktitle = {European Conference on Information Retrieval, {ECIR} 2025, Lucca, Italy, April 6-11, 2025},
   pages     = {20--37},
@@ -64,59 +56,67 @@
   year      = {2025},
   doi       = {10.1007/978-3-031-88711-6_2},
   selected    = {true},
-  code      = {https://github.com/TIBHannover/patent-figure-classification}
+  code      = {https://github.com/TIBHannover/patent-figure-classification},
+  month     = {apr},
+  arxiv     = {2501.12751},
+  dataset   = {https://github.com/TIBHannover/patent-figure-classification},
+  abstract  = {Patent figure classification facilitates faceted search in patent retrieval systems, enabling efficient prior art search. Existing approaches have explored patent figure classification for only a single aspect and for aspects with a limited number of concepts. In recent years, large vision-language models (LVLMs) have shown tremendous performance across numerous computer vision downstream tasks, however, they remain unexplored for patent figure classification. Our work explores the efficacy of LVLMs in patent figure visual question answering (VQA) and classification, focusing on zero-shot and few-shot learning scenarios. For this purpose, we introduce new datasets, PatFigVQA and PatFigCLS, for fine-tuning and evaluation regarding multiple aspects of patent figures (i.e., type, projection, patent class, and objects). For a computational-effective handling of a large number of classes using LVLM, we propose a novel tournament-style classification strategy that leverages a series of multiple-choice questions. Experimental results and comparisons of multiple classification approaches based on LVLMs and Convolutional Neural Networks (CNNs) in few-shot settings show the feasibility of the proposed approaches.},
+  bibtex_show = {true}
 }
 
-
-@inproceedings{DBLP:conf/birws/BanerjeeAUB23, 
+@inproceedings{banerjee2023dblpquad,
   abbr      = {BIR},
   author    = {Debayan Banerjee and
                Sushil Awale and
                Ricardo Usbeck and
                Chris Biemann},
-  editor_   = {Ingo Frommholz and
-               Philipp Mayr and
-               Guillaume Cabanac and
-               Suzan Verberne and
-               Jordan Brennan},
   title     = {{DBLP-QuAD}: {A} Question Answering Dataset over the {DBLP} Scholarly Knowledge Graph},
   booktitle = {Workshop on Bibliometric-enhanced Information Retrieval co-located with the European Conference on Information Retrieval, {BIR}@{ECIR} 2023, Dublin, Ireland, April 2, 2023},
-  series_   = {{CEUR} Workshop Proceedings},
-  volume_   = {3617},
   pages     = {37--51},
   publisher = {CEUR-WS.org},
   year      = {2023},
   url       = {https://ceur-ws.org/Vol-3617/paper-05.pdf},
-  timestamp = {Wed, 17 Jan 2024 17:12:17 +0100},
-  biburl    = {https://dblp.org/rec/conf/birws/BanerjeeAUB23.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
   selected    = {true},
-  code      = {https://github.com/awalesushil/DBLP-QuAD}
+  code      = {https://github.com/awalesushil/DBLP-QuAD},
+  month     = {apr},
+  arxiv     = {2303.13351},
+  dataset   = {https://doi.org/10.5281/zenodo.7554378},
+  abstract  = {In this work we create a question answering dataset over the DBLP scholarly knowledge graph (KG). DBLP is an on-line reference for bibliographic information on major computer science publications that indexes over 4.4 million publications published by more than 2.2 million authors. Our dataset consists of 10,000 question answer pairs with the corresponding SPARQL queries which can be executed over the DBLP KG to fetch the correct answer. DBLP-QuAD is the largest scholarly question answering dataset.},
+  bibtex_show = {true}
 }
 
-@inproceedings{DBLP:conf/aaai/BanerjeeYAB23, 
+@inproceedings{banerjee2023scholarlyqald,
+  abbr      = {ISWC},
+  author    = {Banerjee, Debayan and
+               Jaradeh, Mohamad Yaser and
+               Awale, Sushil and
+               Mihindukulasooriya, Nandana and
+               Auer, S{\"o}ren and
+               Usbeck, Ricardo},
+  title     = {The Scholarly {QALD} Challenge},
+  booktitle = {International Semantic Web Conference},
+  year      = {2023},
+  bibtex_show = {true}
+}
+
+@inproceedings{banerjee2023ardias,
   abbr      = {SDU},
   author    = {Debayan Banerjee and
                Seid Muhie Yimam and
                Sushil Awale and
                Chris Biemann},
-  editor_   = {Amir Pouran Ben Veyseh and
-               Franck Dernoncourt and
-               Thien Huu Nguyen and
-               Viet Dac Lai},
   title     = {{ARDIAS:} {AI}-Enhanced Research Management, Discovery, and Advisory System},
   booktitle = {Workshop on Scientific Document Understanding co-located with the {AAAI} Conference on Artificial Intelligence, {SDU}@{AAAI} 2023, Virtual Event, February 14, 2023},
-  series_   = {{CEUR} Workshop Proceedings},
-  volume_   = {3656},
   publisher = {CEUR-WS.org},
   year      = {2023},
   url       = {https://ceur-ws.org/Vol-3656/paper4.pdf},
-  timestamp = {Wed, 24 Jul 2024 21:43:14 +0200},
-  biburl    = {https://dblp.org/rec/conf/aaai/BanerjeeYAB23.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+  month     = {feb},
+  arxiv     = {2301.10577},
+  abstract  = {In this work, we present ARDIAS, a web-based application that aims to provide researchers with a full suite of discovery and collaboration tools. ARDIAS currently allows searching for authors and articles by name and gaining insights into the research topics of a particular researcher. With the aid of AI-based tools, ARDIAS aims to recommend potential collaborators and topics to researchers. In the near future, we aim to add tools that allow researchers to communicate with each other and start new projects.},
+  bibtex_show = {true}
 }
 
-@inproceedings{AwaleJana2022EURASIA, 
+@inproceedings{awale2022hindiwordnet,
   abbr      = {EURASIA},
   author    = {Sushil Awale and
                Abhik Jana},
@@ -126,11 +126,12 @@
   publisher = {European Language Resources Association},
   year      = {2022},
   url       = {https://aclanthology.org/2022.eurali-1.13},
-  biburl    = {https://aclanthology.org/2022.eurali-1.13.bib},
-  bibsource = {acl anthology, https://aclanthology.org}
+  month     = {jun},
+  abstract  = {Even though the use of WordNet in the Natural Language Processing domain is unquestionable, creating and maintaining WordNet is a cumbersome job and it is even difficult for low resource languages like Hindi. In this study, we aim to enrich the Hindi WordNet automatically by using state-of-the-art knowledge graph completion (KGC) approaches. We pose the automatic Hindi WordNet enrichment problem as a knowledge graph completion task and therefore we modify the WordNet structure to make it appropriate for applying KGC approaches. Second, we attempt five KGC approaches of three different genres and compare the performances for the task. Our study shows that ConvE is the best KGC methodology for this specific task compared to other KGC approaches.},
+  bibtex_show = {true}
 }
 
-@article{AwalePreprocessingNepali2022, 
+@article{awale2022nepalicorpus,
   abbr      = {NL},
   author    = {Sushil Awale and
                Suraj Prasai and
@@ -142,5 +143,7 @@
   pages     = {1--6},
   year      = {2022},
   issn      = {0259-1006},
-  doi       = {10.3126/nl.v35i01.46553}
+  doi       = {10.3126/nl.v35i01.46553},
+  abstract  = {Text collected from online resources introduce a lot of errors which results in incorrect learning outcomes in automatic language learning tasks. In this paper, we discuss a Nepali text preprocessing pipeline to generate clean corpus. This pipeline is tested using a language model to observe impact of each steps in learning task. The relevancy of this work lies in systematizing the procedure in the development of standard Nepali corpus.},
+  bibtex_show = {true}
 }

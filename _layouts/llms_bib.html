@@ -1,0 +1,3 @@
+---
+---
+@@ITEM@@ [{{ entry.title | unbrace }}]({{ '/publications/' | append: entry.key | append: '/' | absolute_url }}){% for a in entry.author_array %}{% if forloop.first %} — {% else %}, {% endif %}{{ a.first }} {{ a.last }}{% endfor %}. {% if entry.booktitle %}{{ entry.booktitle | unbrace }}{% elsif entry.journal %}{{ entry.journal }}{% endif %} ({{ entry.year }}).{% if entry.award %} Award: {{ entry.award }}.{% endif %}{% if entry.doi %} DOI: https://doi.org/{{ entry.doi }}{% elsif entry.url %} {{ entry.url }}{% endif %}{% if entry.arxiv %} arXiv: https://arxiv.org/abs/{{ entry.arxiv }}{% endif %}{% if entry.code %} Code: {{ entry.code }}{% endif %}{% if entry.dataset %} Data: {{ entry.dataset }}{% endif %}

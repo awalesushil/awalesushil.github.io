@@ -60,7 +60,7 @@ max_width: 800px
 # Display links to the page with a preview object on social media.
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: https://sushilawale.com/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
+og_image: https://sushilawale.com/assets/img/og-image.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -249,14 +249,15 @@ scholar:
   replace_strings: true
   join_strings: true
 
-  details_dir: bibliography
+  details_dir: publications
   details_layout: bibtex.html
   details_link: Details
+  details_permalink: /publications/:key/
 
   query: "@*"
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, award, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview]
+filtered_bibtex_keywords: [abbr, abstract, award, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, dataset, demo]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: 3  # leave blank to always show all authors

@@ -4,17 +4,35 @@
   tags: [multimodal retrieval, patent search, vision-language models]
   code: https://github.com/TIBHannover/iPatent
   demo: https://service.tib.eu/ipatent/
-  paper: https://ceur-ws.org/Vol-4062/paper8.pdf
+  paper: /publications/awale2025ipatent/
   venue: PatentSemTech @ SIGIR 2025
   home: true
 
 - name: Patent Figure Classification
   repo: TIBHannover/patent-figure-classification
-  description: Official code for the ECIR 2025 paper on classifying patent figures with large vision-language models.
+  description: Code and the PatFigCLS / PatFigVQA datasets for classifying patent figures by type, projection, patent class and object with large vision-language models, including a tournament-style multiple-choice strategy for large label sets.
   tags: [vision-language models, classification, patents]
   code: https://github.com/TIBHannover/patent-figure-classification
-  paper: https://doi.org/10.1007/978-3-031-88711-6_2
+  paper: /publications/awale2025patfig/
+  dataset: https://github.com/TIBHannover/patent-figure-classification
   venue: ECIR 2025
+  home: true
+
+- name: CARA
+  repo: TIBHannover/CARA
+  description: Open-source tool for building relevance judgments for image retrieval test collections. Annotators judge pools in groups of similar images, and a built-in simulator compares grouping settings before a study starts.
+  tags: [relevance assessment, image retrieval, evaluation]
+  code: https://github.com/TIBHannover/CARA
+  docs: https://tibhannover.github.io/CARA/
+  venue: Software, 2026
+  home: true
+
+- name: Colonial-Context VLM Bias Dataset
+  description: Annotated historical photographs for measuring gender and skin-tone retrieval bias of vision-language models in archival collections.
+  tags: [dataset, bias, cultural heritage, vision-language models]
+  dataset: https://doi.org/10.5281/zenodo.19455764
+  paper: /publications/awale2026websci/
+  venue: WebSci 2026
   home: true
 
 - name: Fusing Vision and Language Tutorial
@@ -29,7 +47,8 @@
   description: 10,000 question-answer pairs with SPARQL queries over the DBLP scholarly knowledge graph, for knowledge graph question answering.
   tags: [dataset, knowledge graphs, question answering]
   code: https://github.com/awalesushil/DBLP-QuAD
-  paper: https://ceur-ws.org/Vol-3617/paper-05.pdf
+  paper: /publications/banerjee2023dblpquad/
+  dataset: https://doi.org/10.5281/zenodo.7554378
   venue: BIR @ ECIR 2023
   home: true
 

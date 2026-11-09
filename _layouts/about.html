@@ -48,6 +48,13 @@ layout: default
             <!-- Selected papers -->
             {%- include selected_papers.html %}
           {%- endif %}
+          {% if page.featured_projects -%}
+          <section class="featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">code &amp; projects</h2>
+            {%- include featured_projects.html home=true %}
+            <p class="news-more"><a href="{{ '/repositories/' | relative_url }}">all projects &rarr;</a></p>
+          </section>
+          {%- endif %}
           {%- if page.social %}
           <!-- Social -->
           <div class="social">

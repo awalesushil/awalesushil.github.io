@@ -9,11 +9,14 @@
 - title: Education
   type: time_table
   contents:
+    - title: Ph.D. candidate, Computer Science
+      institution: Leibniz Universität Hannover, Hannover, Germany. Supervisor - Prof. Dr. Ralph Ewerth
+      year: ongoing
     - title: M.Sc. Intelligent Adaptive Systems
       institution: Universität Hamburg, Hamburg, Germany
       year: 2023
     - title: B.Sc. Computer Science and Information Technology
-      institution: Tribhuwan University, Kathmandu, Nepal
+      institution: Tribhuvan University, Kathmandu, Nepal
       year: 2020
 
 - title: Experience
@@ -22,14 +25,48 @@
     - title: Research Associate
       institution: TIB - Leibniz Information Centre for Science and Technology, Hannover, Germany
       year: April 2023 - present
+      description:
+        - Visual Analytics Research Group. Multimodal information retrieval for patents and cultural heritage collections with vision-language models.
 
     - title: Student Assistant
       institution: Language Technology Group, Universität Hamburg, Germany
       year: Jan 2022 - March 2023
 
+- title: Awards
+  type: time_table
+  contents:
+    - title: Best Poster Paper Award
+      institution: ACM Web Science Conference 2026, Braunschweig, Germany
+      year: 2026
+      description:
+        - <a href="/publications/awale2026websci/">Examining Gender and Racial Bias in Vision-language Models within Colonial Contexts</a>
+
+- title: Talks and Tutorials
+  type: time_table
+  contents:
+    - title: "Fusing Vision and Language: A Tutorial on Vision-Language Models for Multimodal Content Analysis"
+      institution: KONVENS 2025, Conference on Natural Language Processing, Hildesheim, Germany (full-day tutorial, with Eric Müller-Budack)
+      year: Sep 2025
+      description:
+        - <a href="https://tib-visual-analytics.github.io/Konvens2025-FusingLanguageWithVision/">Slides and materials</a>
+
+- title: Publications
+  type: list
+  contents:
+    - Full list with abstracts, code and BibTeX on the <a href="/publications/">publications page</a>, and on <a href="https://scholar.google.com/citations?user=YYO3U8UAAAAJ">Google Scholar</a>.
+
 - title: Open Source Projects
   type: time_table
   contents:
+    - title: <a href="https://github.com/TIBHannover/CARA">CARA</a>
+      year: 2026
+      description: Cluster-assisted relevance assessment tool for building image retrieval test collections
+    - title: <a href="https://github.com/TIBHannover/iPatent">iPatent</a>
+      year: 2025
+      description: Interactive multimodal patent image search and interpretation system (<a href="https://service.tib.eu/ipatent/">live demo</a>)
+    - title: <a href="https://github.com/TIBHannover/patent-figure-classification">Patent Figure Classification</a>
+      year: 2025
+      description: Code and PatFigCLS / PatFigVQA datasets for patent figure classification with vision-language models
     - title: <a href="https://github.com/awalesushil/DBLP-QuAD">DBLP-QuAD</a>
       year: 2023
       description: Scholarly Question Answering dataset consisting of 10,000 questions and corresponding SPARQL queries
