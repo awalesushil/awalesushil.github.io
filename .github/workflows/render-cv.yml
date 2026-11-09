@@ -8,8 +8,8 @@ jobs:
     name: RenderCV
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Install RenderCV
@@ -20,7 +20,7 @@ jobs:
           python bin/cv_pdf.py _data/cv.yml _bibliography/papers.bib assets/rendercv/cv.yaml
           rendercv render assets/rendercv/cv.yaml --settings assets/rendercv/settings.yaml
       - name: Upload rendercv_output as an artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: RenderCV Output
           path: assets/pdf/cv.pdf
