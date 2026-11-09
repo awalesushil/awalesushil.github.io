@@ -1,0 +1,187 @@
+{%- if page.entry and page.entry.abstract -%}
+  {%- assign meta_desc = page.entry.abstract | unbrace | strip_newlines | truncate: 300 | escape -%}
+{%- elsif page.description -%}
+  {%- assign meta_desc = page.description | strip | escape -%}
+{%- else -%}
+  {%- assign meta_desc = site.description | strip | escape -%}
+{%- endif -%}
+{% if site.enable_google_verification or site.enable_bing_verification %}
+    <!-- Website verification -->
+    {% if site.enable_google_verification -%}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+    {%- endif -%}
+    {% if site.enable_bing_verification -%}
+    <meta name="msvalidate.01" content="{{ site.bing_site_verification }}" />
+    {%- endif -%}
+{%- endif %}
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+    {%- if site.title == "blank" -%}
+        {%- capture title -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
+    {%- else -%}
+        {%- capture title -%}{{ site.title }}{%- endcapture -%}
+    {%- endif -%}
+    {% if page.url == '/blog/index.html' %}
+        {{ site.blog_nav_title }} | {{ title }}
+    {%- elsif page.title != "blank" and page.url != "/" -%}
+        {%- if page.title == nil or page.title == "" -%}
+            {{ page.date | date: "%Y" }} | {{ title }}
+        {%- else -%}
+            {{ page.title }} | {{ title }}
+        {%- endif -%}
+    {%- else -%}
+        {{ title }}
+    {%- endif -%}
+    </title>
+    <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
+    <meta name="description" content="{{ meta_desc }}" />
+{%- if page.keywords or site.keywords %}
+    <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
+{%- endif %}
+
+
+{%- if page.entry %}
+    <!-- Google Scholar -->
+    {%- assign e = page.entry %}
+    <meta name="citation_title" content="{{ e.title | unbrace | escape }}" />
+    {%- for a in e.author_array %}
+    <meta name="citation_author" content="{{ a.last | escape }}, {{ a.first | escape }}" />
+    {%- endfor %}
+    {%- assign month_num = "" %}
+    {%- assign month_names = "jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec" | split: "," %}
+    {%- for m in month_names %}{% assign m_lower = e.month | downcase | slice: 0, 3 %}{% if m == m_lower %}{% capture month_num %}{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}{% endcapture %}{% endif %}{% endfor %}
+    <meta name="citation_publication_date" content="{{ e.year }}{% if month_num != "" %}/{{ month_num }}{% endif %}" />
+    {%- if e.type == "article" %}
+    <meta name="citation_journal_title" content="{{ e.journal | unbrace | escape }}" />
+    {%- if e.volume %}<meta name="citation_volume" content="{{ e.volume }}" />{% endif %}
+    {%- else %}
+    <meta name="citation_conference_title" content="{{ e.booktitle | unbrace | escape }}" />
+    {%- endif %}
+    {%- if e.pages %}
+    {%- assign pg = e.pages | replace: "–", "--" | split: "--" %}
+    <meta name="citation_firstpage" content="{{ pg[0] }}" />
+    {%- if pg[1] %}<meta name="citation_lastpage" content="{{ pg[1] }}" />{% endif %}
+    {%- endif %}
+    {%- if e.publisher %}<meta name="citation_publisher" content="{{ e.publisher | unbrace | escape }}" />{% endif %}
+    {%- if e.doi %}<meta name="citation_doi" content="{{ e.doi }}" />{% endif %}
+    {%- if e.arxiv %}<meta name="citation_arxiv_id" content="{{ e.arxiv }}" />
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/{{ e.arxiv }}" />
+    {%- elsif e.url contains ".pdf" %}<meta name="citation_pdf_url" content="{{ e.url }}" />{% endif %}
+    <meta name="citation_abstract_html_url" content="{{ page.url | absolute_url }}" />
+    {%- if e.abstract %}<meta name="citation_abstract" content="{{ e.abstract | unbrace | strip_newlines | escape }}" />{% endif %}
+{%- endif %}
+
+{%- if page.entry.preview -%}
+  {%- assign og_image_url = page.entry.preview | prepend: '/assets/img/publication_preview/' | absolute_url -%}
+{%- else -%}
+  {%- assign og_image_url = page.og_image | default: site.og_image -%}
+{%- endif -%}
+{%- if site.serve_og_meta %}
+
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="{{ title }}" />
+    <meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}" />
+    <meta property="og:title" content="{%- if page.url == '/' or page.title == blank -%}{{ title }}{%- else -%}{{ page.title }} | {{ title }}{%- endif -%}" />
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
+    <meta property="og:description" content="{{ meta_desc }}" />
+    {% if page.og_image or site.og_image -%}
+    <meta property="og:image" content="{{ og_image_url }}" />
+    {%- endif %}
+    <meta property="og:locale" content="{{ site.lang }}" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta name="twitter:description" content="{{ meta_desc }}" />
+    {% if page.og_image or site.og_image -%}
+    <meta name="twitter:image" content="{{ og_image_url }}" />
+    {%- endif %}
+    {% if site.twitter_username -%}
+    <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+    {%- endif %}
+{%- endif %}
+
+{%- if true %}
+
+    <!-- Schema.org -->
+    {%- assign so = site.data.socials -%}
+    {%- assign sameaslinks = "" | split: "," -%}
+    {%- capture sameas_csv -%}
+      {%- if so.orcid_id -%}https://orcid.org/{{ so.orcid_id }},{%- endif -%}
+      {%- if so.scholar_userid -%}https://scholar.google.com/citations?user={{ so.scholar_userid }},{%- endif -%}
+      {%- if so.semanticscholar_id -%}https://www.semanticscholar.org/author/{{ so.semanticscholar_id }},{%- endif -%}
+      {%- if so.dblp_url -%}{{ so.dblp_url }},{%- endif -%}
+      {%- if so.github_username -%}https://github.com/{{ so.github_username }},{%- endif -%}
+      {%- if so.linkedin_username -%}https://www.linkedin.com/in/{{ so.linkedin_username }},{%- endif -%}
+    {%- endcapture -%}
+    {%- assign sameaslinks = sameas_csv | split: "," -%}
+
+    {%- assign person = site.data.person -%}
+    {%- capture full_name -%}{{ site.first_name }}{% if site.middle_name != blank %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{%- endcapture -%}
+    {%- assign home_url = '/' | absolute_url -%}
+    {%- capture person_json -%}
+      {
+        "@type": "Person",
+        "@id": {{ home_url | append: '#person' | jsonify }},
+        "name": {{ full_name | jsonify }},
+        "url": {{ home_url | jsonify }},
+        "image": {{ '/assets/img/prof_pic.jpg' | absolute_url | jsonify }},
+        "jobTitle": {{ person.job_title | jsonify }},
+        "description": {{ person.summary | jsonify }},
+        "worksFor": { "@type": "ResearchOrganization", "name": {{ person.works_for.name | jsonify }}, "url": {{ person.works_for.url | jsonify }} },
+        "affiliation": [{% for a in person.affiliations %}{ "@type": "CollegeOrUniversity", "name": {{ a.name | jsonify }}, "url": {{ a.url | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+        "alumniOf": [{% for a in person.alumni_of %}{ "@type": "CollegeOrUniversity", "name": {{ a.name | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+        "knowsAbout": {{ person.knows_about | jsonify }},
+        "homeLocation": { "@type": "Place", "name": {{ person.location | jsonify }} }{% if sameaslinks != blank %},
+        "sameAs": {{ sameaslinks | jsonify }}{% endif %}
+      }
+    {%- endcapture %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        {%- if page.url == "/" %}
+        "@type": "ProfilePage",
+        "url": {{ home_url | jsonify }},
+        "name": {{ full_name | jsonify }},
+        "description": {{ page.description | default: site.description | strip | jsonify }},
+        {%- if site.last_updated %}
+        "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+        {%- endif %}
+        "mainEntity": {{ person_json }}
+        {%- else %}
+        {%- if page.entry %}
+        "@type": "ScholarlyArticle",
+        "headline": {{ page.entry.title | unbrace | jsonify }},
+        "datePublished": {{ page.entry.year | append: "" | jsonify }},
+        {%- if page.entry.abstract %}
+        "abstract": {{ page.entry.abstract | unbrace | strip_newlines | jsonify }},
+        {%- endif %}
+        {%- if page.entry.doi %}
+        "sameAs": {{ page.entry.doi | prepend: "https://doi.org/" | jsonify }},
+        {%- endif %}
+        "isPartOf": { "@type": "PublicationEvent", "name": {% if page.entry.journal %}{{ page.entry.journal | unbrace | jsonify }}{% else %}{{ page.entry.booktitle | unbrace | jsonify }}{% endif %} },
+        {%- if page.entry.award %}
+        "award": {{ page.entry.award | jsonify }},
+        {%- endif %}
+        "author": [{% for a in page.entry.author_array %}{% capture an %}{{ a.first }} {{ a.last }}{% endcapture %}{% if site.scholar.last_name contains a.last and site.scholar.first_name contains a.first %}{ "@id": {{ '/' | absolute_url | append: '#person' | jsonify }}, "@type": "Person", "name": {{ an | jsonify }} }{% else %}{ "@type": "Person", "name": {{ an | jsonify }} }{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}],
+        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page.entry.title | unbrace | jsonify }},
+        "description": {{ meta_desc | jsonify }}
+        {%- else %}
+        "@type": "WebPage",
+        "url": {{ page.url | replace: 'index.html', '' | absolute_url | jsonify }},
+        "name": {{ page.title | append: ' | ' | append: full_name | jsonify }},
+        "description": {{ page.description | default: site.description | strip | jsonify }},
+        "isPartOf": { "@type": "WebSite", "url": {{ home_url | jsonify }}, "name": {{ full_name | jsonify }} },
+        "about": { "@id": {{ home_url | append: '#person' | jsonify }} },
+        "author": {{ person_json }}
+        {%- endif %}
+        {%- endif %}
+      }
+    </script>
+{%- endif %}

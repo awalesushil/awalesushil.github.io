@@ -1,0 +1,31 @@
+<div class="news">
+  {% if site.news != blank %}
+    {% assign news_size = site.news | size %}
+    {% assign news = site.news | sort: 'date' | reverse %}
+    {% if include.limit and page.announcements.limit %}
+      {% assign news_limit = page.announcements.limit %}
+    {% else %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+    <ul class="news-list">
+      {% for item in news limit: news_limit %}
+        <li class="news-item{% if item.highlight %} news-highlight news-{{ item.highlight }}{% endif %}">
+          <time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %Y' }}</time>
+          <div class="news-body">
+            {% if item.highlight == 'award' %}<span class="news-tag"><i class="fa-solid fa-trophy" aria-hidden="true"></i> award</span>{% endif %}
+            {% if item.inline %}
+              {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+            {% else %}
+              <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if news_size > news_limit %}
+      <p class="news-more"><a href="{{ '/news/' | relative_url }}">all news ({{ news_size }}) &rarr;</a></p>
+    {% endif %}
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+</div>

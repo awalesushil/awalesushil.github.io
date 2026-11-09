@@ -8,16 +8,23 @@ description: Sushil Awale is a Research Associate at TIB Hannover and PhD candid
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  address: 
+  image_circular: false
+  more_info:
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: true
+social: true
 featured_projects: true
-social: true  # includes social icons at the bottom of the page
+
+announcements:
+  enabled: true
+  scrollable: false
+  limit: 5
+
+latest_posts:
+  enabled: false
 ---
 
-I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover and a PhD candidate at Leibniz Universität Hannover. I am also part of the [Multimodal Modelling and Machine Learning (M3L)](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) Team at Universität Marburg. I'm supervised by [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).
+I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover and a PhD candidate at Leibniz Universität Hannover. Since December 2025, I have also been working as a Research Associate in the [Multimodal Modelling and Machine Learning (M3L)](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) team at Universität Marburg. I'm supervised by [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).
 
 My research focuses on Multimodal Information Retrieval for scientific, technical, and cultural domains. I build advanced IR systems leveraging vision-language models to support search in patents and improve cultural heritage access. My broader research interests include domain adaptation for better multimodal representations, Knowledge Graphs, and Natural Language Processing.
 

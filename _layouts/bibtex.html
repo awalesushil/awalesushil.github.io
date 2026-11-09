@@ -27,19 +27,25 @@ layout: default
     </p>
     <p class="paper-venue"><em>{% if entry.type == "article" %}{{ entry.journal }}{% if entry.volume %}, vol. {{ entry.volume }}{% endif %}{% else %}{{ entry.booktitle }}{% endif %}</em>{% if entry.pages %}, pp. {{ entry.pages | replace: "--", "–" }}{% endif %}{% if entry.publisher %}. {{ entry.publisher | unbrace }}{% endif %}.</p>
     {%- if entry.award %}
-    <p><span class="award-badge"><i class="fas fa-trophy" aria-hidden="true"></i> {{ entry.award }}</span></p>
+    <p><span class="award-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> {{ entry.award_name | default: entry.award }}</span></p>
     {%- endif %}
   </header>
 
   <div class="paper-links">
-    {%- if entry.arxiv %}<a class="btn btn-sm z-depth-0" href="https://arxiv.org/pdf/{{ entry.arxiv }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF (arXiv)</a>{% endif %}
-    {%- if entry.doi %}<a class="btn btn-sm z-depth-0" href="https://doi.org/{{ entry.doi }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Publisher (DOI)</a>
-    {%- elsif entry.url %}<a class="btn btn-sm z-depth-0" href="{{ entry.url }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
-    {%- if entry.code %}<a class="btn btn-sm z-depth-0" href="{{ entry.code }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
-    {%- if entry.dataset %}<a class="btn btn-sm z-depth-0" href="{{ entry.dataset }}"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
-    {%- if entry.demo %}<a class="btn btn-sm z-depth-0" href="{{ entry.demo }}"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
-    {%- if entry.blog %}<a class="btn btn-sm z-depth-0" href="{{ entry.blog | relative_url }}"><i class="fas fa-pen" aria-hidden="true"></i> Blog post</a>{% endif %}
+    {%- if entry.arxiv %}<a class="btn btn-sm z-depth-0" href="https://arxiv.org/pdf/{{ entry.arxiv }}"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF (arXiv)</a>{% endif %}
+    {%- if entry.doi %}<a class="btn btn-sm z-depth-0" href="https://doi.org/{{ entry.doi }}"><i class="fa-solid fa-external-link-alt" aria-hidden="true"></i> Publisher (DOI)</a>
+    {%- elsif entry.url %}<a class="btn btn-sm z-depth-0" href="{{ entry.url }}"><i class="fa-solid fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+    {%- if entry.code %}<a class="btn btn-sm z-depth-0" href="{{ entry.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+    {%- if entry.dataset %}<a class="btn btn-sm z-depth-0" href="{{ entry.dataset }}"><i class="fa-solid fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
+    {%- if entry.demo %}<a class="btn btn-sm z-depth-0" href="{{ entry.demo }}"><i class="fa-solid fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
+    {%- if entry.blog %}<a class="btn btn-sm z-depth-0" href="{{ entry.blog | relative_url }}"><i class="fa-solid fa-pen" aria-hidden="true"></i> Blog post</a>{% endif %}
   </div>
+
+  {%- if entry.preview %}
+  <figure class="paper-figure">
+    <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Figure from {{ entry.title | unbrace | escape }}" loading="lazy">
+  </figure>
+  {%- endif %}
 
   {%- if entry.abstract %}
   <section class="paper-section">

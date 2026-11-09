@@ -1,0 +1,17 @@
+# for details on settings, see https://docs.rendercv.com/user_guide/yaml_input_structure/settings/
+settings:
+  render_command:
+    # Paths are relative to assets/rendercv/cv.yaml, written by bin/cv_pdf.py
+    design: design.yaml
+    locale: locale.yaml
+    typst_path: rendercv_output/cv.typ
+    pdf_path: ../pdf/cv.pdf
+    markdown_path: rendercv_output/cv.md
+    html_path: rendercv_output/cv.html
+    png_path: rendercv_output/cv.png
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_typst: false # typst generation is required for pdf output
+    dont_generate_pdf: false
+    dont_generate_png: true
+  bold_keywords: []

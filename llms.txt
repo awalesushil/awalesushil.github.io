@@ -12,7 +12,7 @@ sitemap: false
 - Role: {{ person.job_title }}, {{ person.works_for.name }}
 - Location: {{ person.location }}
 - Research interests: {{ person.knows_about | join: ", " }}
-- Contact: {{ site.contact_note | strip }} https://www.linkedin.com/in/{{ site.linkedin_username }}
+- Contact: {{ site.contact_note | strip }} https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}
 
 ## Pages
 
@@ -46,9 +46,9 @@ sitemap: false
 
 ## Profiles
 
-- Google Scholar: https://scholar.google.com/citations?user={{ site.scholar_userid }}
-- Semantic Scholar: https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}
-- ORCID: https://orcid.org/{{ site.orcid_id }}
-- DBLP: {{ site.dblp_url }}
-- GitHub: https://github.com/{{ site.github_username }}
-- LinkedIn: https://www.linkedin.com/in/{{ site.linkedin_username }}
+- Google Scholar: https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}
+- Semantic Scholar: https://www.semanticscholar.org/author/{{ site.data.socials.semanticscholar_id }}
+- ORCID: https://orcid.org/{{ site.data.socials.orcid_id }}
+- DBLP: {{ site.data.socials.dblp_url }}
+- GitHub: https://github.com/{{ site.data.socials.github_username }}
+- LinkedIn: https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}
