@@ -42,6 +42,15 @@ layout: default
     </section>
   {% endif %}
 
+  {% if site.data.spotlight and site.data.spotlight.size > 0 %}
+    <section class="home-section" aria-labelledby="home-spotlight">
+      <div class="section-head">
+        <h2 class="section-label" id="home-spotlight">{{ t.spotlight }}</h2>
+      </div>
+      {% include spotlight.liquid %}
+    </section>
+  {% endif %}
+
   {% if page.announcements and page.announcements.enabled %}
     <section class="home-section" aria-labelledby="home-news">
       <div class="section-head">

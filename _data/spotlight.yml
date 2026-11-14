@@ -1,0 +1,10 @@
+# Homepage "Featured" row: external coverage of the work. Keep 1 item (2 at most).
+# image: 4:3, own material only (no images copied from the article).
+- title: "Visual and Multimodal Patent Search: Exploring New Frontiers"
+  source: European Patent Office
+  source_de: Europäisches Patentamt
+  date: 2026-03
+  text: The EPO on our joint work adapting vision-language models to patent search, now in pilot use.
+  text_de: Das EPA über unsere gemeinsame Patentsuche mit Vision-Language-Modellen, jetzt im Pilotbetrieb.
+  url: https://www.linkedin.com/pulse/visual-multimodal-patent-search-exploring-new-klenner-bajaja-aip6e/
+  image: /assets/img/featured/patent-search.jpg

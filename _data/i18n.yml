@@ -9,6 +9,7 @@ en:
   more_projects: More projects
   all_publications: All publications
   selected_work: Selected work
+  spotlight: Featured
   months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
   links: {code: Code, demo: Demo, data: Data, docs: Docs, materials: Materials, paper: Paper}
   switch_label: Deutsch
@@ -35,6 +36,7 @@ de:
   more_projects: Weitere Projekte
   all_publications: Alle Publikationen
   selected_work: Ausgewählte Arbeiten
+  spotlight: Im Fokus
   contact_note: Am besten erreichen Sie mich über LinkedIn.
   months: [Jan., Feb., März, Apr., Mai, Juni, Juli, Aug., Sep., Okt., Nov., Dez.]
   links: {code: Code, demo: Demo, data: Daten, docs: Doku, materials: Materialien, paper: Paper}

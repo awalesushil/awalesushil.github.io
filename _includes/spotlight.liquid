@@ -1,0 +1,16 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign labels = site.data.i18n[lang] -%}
+<ul class="spotlight-list">
+{%- for s in site.data.spotlight %}
+  {%- assign month_index = s.date | split: "-" | last | plus: 0 | minus: 1 -%}
+  {%- assign year = s.date | split: "-" | first -%}
+  <li class="pub-compact spotlight">
+    <a class="pub-thumb" href="{{ s.url }}" tabindex="-1" aria-hidden="true"><img src="{{ s.image | relative_url }}" alt="" loading="lazy"></a>
+    <div class="pub-text">
+      <a class="pub-title" href="{{ s.url }}">{{ s.title }}</a>
+      <p class="pub-meta">{% if lang == "de" and s.source_de %}{{ s.source_de }}{% else %}{{ s.source }}{% endif %}, {{ labels.months[month_index] }} {{ year }}</p>
+      <p class="spotlight-text">{% if lang == "de" and s.text_de %}{{ s.text_de }}{% else %}{{ s.text }}{% endif %}</p>
+    </div>
+  </li>
+{%- endfor %}
+</ul>

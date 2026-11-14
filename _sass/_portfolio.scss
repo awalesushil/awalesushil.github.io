@@ -619,3 +619,14 @@ input#bibsearch {
     .pub-thumb-venue { font-size: 0.62rem; }
   }
 }
+
+// Homepage "Featured" row (_includes/spotlight.liquid): a compact entry like the publication rows.
+.spotlight-list { list-style: none; margin: 0; padding: 0; }
+.spotlight + .spotlight { margin-top: 1rem; }
+.spotlight-text {
+  margin: 0.25rem 0 0;
+  max-width: 38rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
