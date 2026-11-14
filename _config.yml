@@ -296,6 +296,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "zohoverify"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
