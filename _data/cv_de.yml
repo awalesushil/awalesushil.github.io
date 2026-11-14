@@ -37,6 +37,7 @@ cv:
         date: 2023
 
       - institution: Tribhuvan University
+        url: http://tribhuvan-university.edu.np/
         location: Kathmandu, Nepal
         area: Informatik und Informationstechnologie
         studyType: B.Sc.
@@ -44,12 +45,14 @@ cv:
 
     Experience:
       - company: Universität Marburg
+        url: https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team
         position: Wissenschaftlicher Mitarbeiter, Multimodal Modelling and Machine Learning (M3L)
         location: Marburg, Deutschland
         start_date: 2025-12
         end_date: present
 
       - company: TIB – Leibniz-Informationszentrum Technik und Naturwissenschaften
+        url: https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics
         position: Wissenschaftlicher Mitarbeiter, Forschungsgruppe Visual Analytics
         location: Hannover, Deutschland
         start_date: 2023-04
@@ -57,6 +60,7 @@ cv:
         summary: Multimodales Information Retrieval für Patente und Kulturerbe-Sammlungen mit Vision-Language-Modellen.
 
       - company: Language Technology Group, Universität Hamburg
+        url: https://www.inf.uni-hamburg.de/en/inst/ab/lt/home.html
         position: Studentische Hilfskraft
         location: Hamburg, Deutschland
         start_date: 2022-01

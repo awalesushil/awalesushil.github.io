@@ -2,14 +2,18 @@ en:
   home: /
   about: about
   news: news
-  all_news: all news
+  all_news: All news
   selected_publications: selected publications
   code_projects: code & projects
-  all_projects: all projects
+  all_projects: All projects
+  more_projects: More projects
+  all_publications: All publications
+  selected_work: Selected work
   months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
   links: {code: Code, demo: Demo, data: Data, docs: Docs, materials: Materials, paper: Paper}
   switch_label: Deutsch
   cv:
+    about: About
     contact: Contact Information
     summary: Professional Summary
     name: Name
@@ -17,19 +21,26 @@ en:
     email: Email
     website: Website
     present: present
+    pdf: Full CV (PDF)
+    publications_note: Every paper with its abstract, code links and BibTeX.
 
 de:
   home: /de/
   about: über mich
   news: Neuigkeiten
-  all_news: alle Neuigkeiten
+  all_news: Alle Neuigkeiten
   selected_publications: ausgewählte Publikationen
   code_projects: Code & Projekte
-  all_projects: alle Projekte
+  all_projects: Alle Projekte
+  more_projects: Weitere Projekte
+  all_publications: Alle Publikationen
+  selected_work: Ausgewählte Arbeiten
+  contact_note: Am besten erreichen Sie mich über LinkedIn.
   months: [Jan., Feb., März, Apr., Mai, Juni, Juli, Aug., Sep., Okt., Nov., Dez.]
   links: {code: Code, demo: Demo, data: Daten, docs: Doku, materials: Materialien, paper: Paper}
   switch_label: English
   cv:
+    about: Über mich
     contact: Kontakt
     summary: Kurzprofil
     name: Name
@@ -37,6 +48,8 @@ de:
     email: E-Mail
     website: Website
     present: heute
+    pdf: Vollständiger Lebenslauf (PDF)
+    publications_note: Alle Publikationen mit Abstract, Code-Links und BibTeX.
     sections:
       Experience: Berufserfahrung
       Education: Ausbildung

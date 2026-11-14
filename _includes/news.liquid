@@ -12,11 +12,15 @@
     <ul class="news-list">
       {% for item in news limit: news_limit %}
         {% assign month_index = item.date | date: '%-m' | minus: 1 %}
-        <li class="news-item{% if item.highlight %} news-highlight news-{{ item.highlight }}{% endif %}">
+        <li class="news-item">
           <time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ t.months[month_index] }} {{ item.date | date: '%Y' }}</time>
           <div class="news-body">
-            {% if item.highlight == 'award' %}<span class="news-tag"><i class="fa-solid fa-trophy" aria-hidden="true"></i> {% if lang == 'de' %}Auszeichnung{% else %}award{% endif %}</span>{% endif %}
-            {% if lang == 'de' and item.de %}
+            {% if item.highlight == 'award' %}<span class="award-mark"><i class="fa-solid fa-trophy" aria-hidden="true"></i> {% if lang == 'de' %}Auszeichnung{% else %}Award{% endif %}</span>{% endif %}
+            {% if include.limit and lang == 'de' and item.short_de %}
+              {{ item.short_de | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+            {% elsif include.limit and item.short %}
+              {{ item.short | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+            {% elsif lang == 'de' and item.de %}
               {{ item.de | markdownify | remove: '<p>' | remove: '</p>' }}
             {% elsif item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -27,7 +31,7 @@
         </li>
       {% endfor %}
     </ul>
-    {% if news_size > news_limit %}
+    {% if news_size > news_limit and include.limit == nil %}
       {% if lang == 'de' %}{% assign news_url = '/de/neuigkeiten/' %}{% else %}{% assign news_url = '/news/' %}{% endif %}
       <p class="news-more"><a href="{{ news_url | relative_url }}">{{ t.all_news }} ({{ news_size }}) &rarr;</a></p>
     {% endif %}

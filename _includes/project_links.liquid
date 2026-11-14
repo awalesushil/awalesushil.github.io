@@ -1,0 +1,12 @@
+{%- assign p = include.p -%}
+{%- assign labels = include.labels -%}
+{%- assign paper_link = p.paper -%}
+{%- unless paper_link contains "://" -%}{%- assign paper_link = p.paper | relative_url -%}{%- endunless -%}
+<div class="plate-links">
+  {%- if p.code %}<a href="{{ p.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i> {{ labels.code }}</a>{% endif %}
+  {%- if p.demo %}<a href="{{ p.demo }}"><i class="fa-solid fa-play-circle" aria-hidden="true"></i> {{ labels.demo }}</a>{% endif %}
+  {%- if p.dataset %}<a href="{{ p.dataset }}"><i class="fa-solid fa-database" aria-hidden="true"></i> {{ labels.data }}</a>{% endif %}
+  {%- if p.docs %}<a href="{{ p.docs }}"><i class="fa-solid fa-book" aria-hidden="true"></i> {{ labels.docs }}</a>{% endif %}
+  {%- if p.website %}<a href="{{ p.website }}"><i class="fa-solid fa-chalkboard-teacher" aria-hidden="true"></i> {{ labels.materials }}</a>{% endif %}
+  {%- if p.paper %}<a href="{{ paper_link }}"><i class="fa-solid fa-file-alt" aria-hidden="true"></i> {{ labels.paper }}</a>{% endif %}
+</div>

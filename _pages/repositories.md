@@ -14,3 +14,4 @@ nav_order: 3
 {% include featured_projects.liquid %}
 
 More on GitHub: [github.com/{{ site.data.socials.github_username }}](https://github.com/{{ site.data.socials.github_username }}) · [TIB Visual Analytics](https://github.com/TIBHannover)
+{: .more-github}

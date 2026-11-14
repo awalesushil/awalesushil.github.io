@@ -4,7 +4,7 @@ alternate: /de/
 layout: about
 title: about
 permalink: /
-subtitle: Research Associate, Visual Analytics Research Group, TIB.
+subtitle: Research Associate at TIB Hannover and Universität Marburg
 description: Sushil Awale is a Research Associate at TIB Hannover and PhD candidate at Leibniz Universität Hannover, researching multimodal information retrieval with vision-language models for patents and cultural heritage.
 
 profile:
@@ -20,16 +20,10 @@ featured_projects: true
 announcements:
   enabled: true
   scrollable: false
-  limit: 5
+  limit: 3
 
 latest_posts:
   enabled: false
 ---
 
-I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB, Hannover and a PhD candidate at Leibniz Universität Hannover. Since December 2025, I have also been working as a Research Associate in the [Multimodal Modelling and Machine Learning (M3L)](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) team at Universität Marburg. I'm supervised by [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).
-
-My research focuses on Multimodal Information Retrieval for scientific, technical, and cultural domains. I build advanced IR systems leveraging vision-language models to support search in patents and improve cultural heritage access. My broader research interests include domain adaptation for better multimodal representations, Knowledge Graphs, and Natural Language Processing.
-
-Previously, I worked as a Student Assistant in the [Language Technology Group](https://www.inf.uni-hamburg.de/en/inst/ab/lt/home.html), Universität Hamburg building an intelligent scholarly system powered by Natural Language Processing (NLP).
-
-I completed my Masters in Machine Learning from [Universität Hamburg](https://master-intelligent-adaptive-systems.com/), Germany in 2023 and my Bachelors in Computer Science in 2020 from [Tribhuvan University](http://tribhuvan-university.edu.np/), Nepal. 
+I build search systems that use vision-language models to find and interpret images in patents and cultural heritage collections. I am a Research Associate in the [Visual Analytics Research Group](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics) at TIB Hannover and in the [M3L team](https://www.uni-marburg.de/en/fb12/research-groups/multimodal-modelling-and-learning/our-team) at Universität Marburg, and a PhD candidate at Leibniz Universität Hannover supervised by [Prof. Dr. Ralph Ewerth](https://www.tib.eu/en/research-development/research-groups-and-labs/visual-analytics/staff/ralph-ewerth).

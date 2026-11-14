@@ -7,6 +7,10 @@
   demo: https://service.tib.eu/ipatent/
   paper: /publications/awale2025ipatent/
   venue: PatentSemTech @ SIGIR 2025
+
+  image: /assets/img/publication_preview/ipatent.jpg
+  short: Patent image search by text or image, with clustered results.
+  short_de: Patentbildsuche per Text oder Bild, mit geclusterten Ergebnissen.
   home: true
 
 - name: Patent Figure Classification
@@ -18,6 +22,10 @@
   paper: /publications/awale2025patfig/
   dataset: https://github.com/TIBHannover/patent-figure-classification
   venue: ECIR 2025
+
+  image: /assets/img/publication_preview/patfig.jpg
+  short: Classifying patent figures with vision-language models.
+  short_de: Patentzeichnungen mit Vision-Language-Modellen klassifizieren.
   home: true
 
 - name: CARA
@@ -28,6 +36,10 @@
   code: https://github.com/TIBHannover/CARA
   docs: https://tibhannover.github.io/CARA/
   venue: Software, 2026
+
+  image: /assets/img/projects/cara.jpg
+  short: A tool for judging image search results in groups of similar images.
+  short_de: Relevanzbewertung von Bildsuchergebnissen in Gruppen.
   home: true
 
 - name: Colonial-Context VLM Bias Dataset
@@ -37,7 +49,6 @@
   dataset: https://doi.org/10.5281/zenodo.19455764
   paper: /publications/awale2026websci/
   venue: WebSci 2026
-  home: true
 
 - name: Fusing Vision and Language Tutorial
   description: Full-day hands-on tutorial on vision-language models for multimodal content analysis, with slides and notebooks.
@@ -45,7 +56,6 @@
   tags: [tutorial, vision-language models]
   website: https://tib-visual-analytics.github.io/Konvens2025-FusingLanguageWithVision/
   venue: KONVENS 2025
-  home: true
 
 - name: DBLP-QuAD
   repo: awalesushil/DBLP-QuAD
@@ -56,7 +66,7 @@
   paper: /publications/banerjee2023dblpquad/
   dataset: https://doi.org/10.5281/zenodo.7554378
   venue: BIR @ ECIR 2023
-  home: true
+  image: /assets/img/publication_preview/dblpquad.jpg
 
 - name: Hindi WordNet Extension
   repo: uhh-lt/hindi-wordnet-extension

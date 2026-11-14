@@ -3,93 +3,64 @@ layout: default
 ---
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
-{% if lang == 'de' %}{% assign news_url = '/de/neuigkeiten/' %}{% assign projects_url = '/de/projekte/' %}{% else %}{% assign news_url = '/news/' %}{% assign projects_url = '/repositories/' %}{% endif %}
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+{% if lang == 'de' %}
+  {% assign news_url = '/de/neuigkeiten/' %}
+  {% assign projects_url = '/de/projekte/' %}
+{% else %}
+  {% assign news_url = '/news/' %}
+  {% assign projects_url = '/repositories/' %}
+{% endif %}
+<div class="post home">
+  <header class="masthead">
+    <div class="masthead-text">
+      <h1 class="masthead-name">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="masthead-role">{{ page.subtitle }}</p>
+      {% if page.social %}
+        <div class="masthead-social contact-icons">{% social_links %}</div>
+        <p class="masthead-note">{{ t.contact_note | default: site.contact_note }}</p>
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    </div>
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <div class="masthead-portrait">
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class="masthead-photo" sizes="(min-width: 576px) 200px, 120px" alt=site.first_name
+          cache_bust=true
+        %}
+      </div>
+    {% endif %}
+    <div class="home-bio">{{ content }}</div>
   </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+  {% if page.featured_projects %}
+    <section class="home-section" aria-labelledby="home-work">
+      <div class="section-head">
+        <h2 class="section-label" id="home-work">{{ t.selected_work }}</h2>
+        <a class="section-more" href="{{ projects_url | relative_url }}">{{ t.all_projects }}</a>
       </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ news_url | relative_url }}" style="color: inherit">{{ t.news }}</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">{{ t.selected_publications }}</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    {% if page.featured_projects %}
-      <h2>
-        <a href="{{ projects_url | relative_url }}" style="color: inherit">{{ t.code_projects }}</a>
-      </h2>
       {% include featured_projects.liquid home=true %}
-      <p class="news-more"><a href="{{ projects_url | relative_url }}">{{ t.all_projects }} &rarr;</a></p>
-    {% endif %}
+    </section>
+  {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
+  {% if page.announcements and page.announcements.enabled %}
+    <section class="home-section" aria-labelledby="home-news">
+      <div class="section-head">
+        <h2 class="section-label" id="home-news">{{ t.news }}</h2>
+        <a class="section-more" href="{{ news_url | relative_url }}">{{ t.all_news }}</a>
       </div>
-    {% endif %}
+      {% include news.liquid limit=true %}
+    </section>
+  {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% if site.plugins contains 'al_newsletter' %}
-        {% include plugins/al_newsletter_form_center_margin.liquid %}
-      {% else %}
-        {% include newsletter.liquid center=true %}
-      {% endif %}
-    {% endif %}
-  </article>
+  {% if page.selected_papers %}
+    <section class="home-section" aria-labelledby="home-pubs">
+      <div class="section-head">
+        <h2 class="section-label" id="home-pubs">{{ t.selected_publications }}</h2>
+        <a class="section-more" href="{{ '/publications/' | relative_url }}">{{ t.all_publications }}</a>
+      </div>
+      <div class="pub-compact-list">
+        {% bibliography -f papers -q @*[selected=true]* --max 3 --group_by none --template bib_compact %}
+      </div>
+    </section>
+  {% endif %}
 </div>

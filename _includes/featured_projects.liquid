@@ -1,28 +1,39 @@
 {%- assign lang = page.lang | default: "en" -%}
-{%- assign t = site.data.i18n[lang].links -%}
-<div class="featured-grid">
+{%- assign link_labels = site.data.i18n[lang].links -%}
+{%- comment -%}
+  home=true: the homepage plates (projects with home: true, short text).
+  Otherwise the full page: projects with an image as plates (full text), then the rest as a plain list.
+{%- endcomment -%}
+<div class="plate-grid{% unless include.home %} plate-grid-full{% endunless %}">
 {%- for p in site.data.featured_projects %}
   {%- if include.home and p.home != true %}{% continue %}{% endif %}
-  {%- assign paper_link = p.paper -%}
-  {%- if paper_link and paper_link contains "://" -%}{%- else -%}{%- assign paper_link = p.paper | relative_url -%}{%- endif -%}
-  <article class="featured-card">
-    <h3 class="featured-name">
-      {%- assign main_link = p.demo | default: p.website | default: p.code | default: p.dataset -%}
-      <a href="{{ main_link }}">{{ p.name }}</a>
-    </h3>
-    {%- if p.venue %}<p class="featured-venue">{{ p.venue }}</p>{% endif %}
-    <p class="featured-desc">{% if lang == "de" and p.description_de %}{{ p.description_de }}{% else %}{{ p.description }}{% endif %}</p>
-    {%- if p.tags %}
-    <ul class="featured-tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
-    {%- endif %}
-    <div class="featured-links">
-      {%- if p.code %}<a href="{{ p.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i> {{ t.code }}</a>{% endif %}
-      {%- if p.demo %}<a href="{{ p.demo }}"><i class="fa-solid fa-play-circle" aria-hidden="true"></i> {{ t.demo }}</a>{% endif %}
-      {%- if p.dataset %}<a href="{{ p.dataset }}"><i class="fa-solid fa-database" aria-hidden="true"></i> {{ t.data }}</a>{% endif %}
-      {%- if p.docs %}<a href="{{ p.docs }}"><i class="fa-solid fa-book" aria-hidden="true"></i> {{ t.docs }}</a>{% endif %}
-      {%- if p.website %}<a href="{{ p.website }}"><i class="fa-solid fa-chalkboard-teacher" aria-hidden="true"></i> {{ t.materials }}</a>{% endif %}
-      {%- if p.paper %}<a href="{{ paper_link }}"><i class="fa-solid fa-file-alt" aria-hidden="true"></i> {{ t.paper }}</a>{% endif %}
-    </div>
+  {%- unless p.image %}{% continue %}{% endunless %}
+  {%- assign main_link = p.demo | default: p.website | default: p.code | default: p.dataset -%}
+  <article class="plate">
+    <a class="plate-image" href="{{ main_link }}" tabindex="-1" aria-hidden="true"><img src="{{ p.image | relative_url }}" alt="" loading="lazy"></a>
+    <h3 class="plate-title"><a href="{{ main_link }}">{{ p.name }}</a></h3>
+    {%- if p.venue %}<p class="plate-caption">{{ p.venue }}</p>{% endif %}
+    <p class="plate-desc">
+      {%- if include.home and lang == "de" and p.short_de %}{{ p.short_de }}
+      {%- elsif include.home and p.short %}{{ p.short }}
+      {%- elsif lang == "de" and p.description_de %}{{ p.description_de }}
+      {%- else %}{{ p.description }}{% endif -%}
+    </p>
+    {% include project_links.liquid p=p labels=link_labels %}
   </article>
 {%- endfor %}
 </div>
+{%- unless include.home %}
+<h2 class="section-label more-label">{{ site.data.i18n[lang].more_projects }}</h2>
+<ul class="project-list">
+{%- for p in site.data.featured_projects %}
+  {%- if p.image %}{% continue %}{% endif %}
+  {%- assign main_link = p.demo | default: p.website | default: p.code | default: p.dataset -%}
+  <li class="project-row">
+    <h3 class="plate-title"><a href="{{ main_link }}">{{ p.name }}</a>{% if p.venue %} <span class="project-venue">{{ p.venue }}</span>{% endif %}</h3>
+    <p class="project-desc">{% if lang == "de" and p.description_de %}{{ p.description_de }}{% else %}{{ p.description }}{% endif %}</p>
+    {% include project_links.liquid p=p labels=link_labels %}
+  </li>
+{%- endfor %}
+</ul>
+{%- endunless %}
