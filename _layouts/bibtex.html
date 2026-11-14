@@ -36,7 +36,7 @@ layout: default
     {%- if entry.doi %}<a class="btn btn-sm z-depth-0" href="https://doi.org/{{ entry.doi }}"><i class="fa-solid fa-external-link-alt" aria-hidden="true"></i> Publisher (DOI)</a>
     {%- elsif entry.url %}<a class="btn btn-sm z-depth-0" href="{{ entry.url }}"><i class="fa-solid fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
     {%- if entry.code %}<a class="btn btn-sm z-depth-0" href="{{ entry.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>{% endif %}
-    {%- if entry.dataset %}<a class="btn btn-sm z-depth-0" href="{{ entry.dataset }}"><i class="fa-solid fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
+    {%- if entry.dataset %}{% assign data_urls = entry.dataset | split: " " %}{% assign data_names = entry.dataset_names | split: "," %}{% for u in data_urls %}<a class="btn btn-sm z-depth-0" href="{{ u }}"><i class="fa-solid fa-database" aria-hidden="true"></i> {% if data_names[forloop.index0] %}{{ data_names[forloop.index0] | strip }}{% else %}Dataset{% endif %}</a>{% endfor %}{% endif %}
     {%- if entry.demo %}<a class="btn btn-sm z-depth-0" href="{{ entry.demo }}"><i class="fa-solid fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
     {%- if entry.award_url %}<a class="btn btn-sm z-depth-0" href="{{ entry.award_url }}"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Award announcement</a>{% endif %}
     {%- if entry.award_certificate %}<a class="btn btn-sm z-depth-0" href="{{ entry.award_certificate | relative_url }}"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Award certificate</a>{% endif %}

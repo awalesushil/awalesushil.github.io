@@ -214,7 +214,11 @@
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if entry.dataset %}
-        <a href="{{ entry.dataset }}" class="btn btn-sm z-depth-0" role="button">Data</a>
+        {%- assign data_urls = entry.dataset | split: " " -%}
+        {%- assign data_names = entry.dataset_names | split: "," -%}
+        {%- for u in data_urls %}
+          <a href="{{ u }}" class="btn btn-sm z-depth-0" role="button">{% if data_names[forloop.index0] %}{{ data_names[forloop.index0] | strip }}{% else %}Data{% endif %}</a>
+        {%- endfor %}
       {% endif %}
       {% if entry.demo %}
         <a href="{{ entry.demo }}" class="btn btn-sm z-depth-0" role="button">Demo</a>

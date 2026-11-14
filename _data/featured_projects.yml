@@ -20,7 +20,8 @@
   tags: [vision-language models, classification, patents]
   code: https://github.com/TIBHannover/patent-figure-classification
   paper: /publications/awale2025patfig/
-  dataset: https://github.com/TIBHannover/patent-figure-classification
+  dataset: https://doi.org/10.5281/zenodo.14905550 https://doi.org/10.5281/zenodo.14907472
+  dataset_names: PatFigCLS, PatFigVQA
   venue: ECIR 2025
 
   image: /assets/img/publication_preview/patfig.jpg
